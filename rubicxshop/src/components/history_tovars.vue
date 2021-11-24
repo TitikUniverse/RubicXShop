@@ -23,7 +23,5 @@ export default {
 </script>
 
 <style scoped>
-.history{
 
-}
 </style>

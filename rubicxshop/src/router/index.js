@@ -12,8 +12,15 @@ const routes = [
   {
   path: '/history',
   component: () => import('@/views/History.vue')
+  },
+  {
+    path: '/orders',
+    component: () => import('@/views/Orders.vue')
   }
+  
+  
 ]
+
 
 const router = new VueRouter({
   mode: 'history',
