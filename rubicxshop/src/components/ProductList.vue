@@ -1,33 +1,34 @@
 <template>
     <div class="product-list">
+      <div class="flex top-information">
+      <h1>rrr</h1>
+    </div>
 
 
 
-
- <ul class="list-default flex">
-      <li
+  <div class="flex"
         v-for="(product, index) in products"
         :key="index"
-      >
+        >
         <product-card
           :title="product.title"
           :price="product.price"
           :img-url="product.imgUrl"
           :count="product.count"
           @addToBasket="addToBasket(index)"
-        />
-      </li>
-    </ul>
+        /> 
+      </div>
     </div>
     
 </template>
 
 <script>
-import ProductCard from './ProductCard'
+import ProductCard from './ProductCard.vue'
+import MyInput from './MyInput.vue'
 
 export default {
   name: 'ProductList',
-  components: {},
+  components: {ProductCard, MyInput},
   data() {
     return {
       searchText: '',
@@ -139,7 +140,26 @@ export default {
 }
 </script>
 
-<style  scoped>
-
+<style lang="scss" scoped>
+.flex {
+  text-align: center;
+}
+.top-information {
+  align-items: center;
+  h1 {
+    margin-bottom: 0;
+  }
+  button {
+    background-color: rgb(221, 56, 56);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 14px;
+    display: block;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  margin-bottom: 22px;
+}
 </style> >
 

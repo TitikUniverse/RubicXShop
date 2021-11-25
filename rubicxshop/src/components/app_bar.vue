@@ -1,13 +1,18 @@
 <template>
   <div class="bar">
-    <a class="active" href="#logo"><img src="" alt="LOGO"></a>
-
-    <div>
-      <a class="profile" href=""></a>
+    <a class="active" href="#logo"><img src="" alt=""></a>
+    
+    
+    <div class="profile">
+      <router-link to="/productshoplist">
+      <img src='../assets/Profile.svg' width="50" height="50">
+      </router-link>
     </div>
 
-    <div>
-      <a class="basket" href=""></a>
+    <div class="basket">
+      <router-link to="/">
+      <img src ='../assets/shop.svg' width="50" height="50">
+      </router-link>
     </div>
 
   </div>
@@ -20,7 +25,7 @@ export default {
 </script>
 
 <style scoped>
-   .bar {
+.bar {
     position: relative;
     height: 50px;
     background-color: #333;
@@ -44,15 +49,12 @@ export default {
 }
 
 .profile{
+
   float: right;
-    background: gray;
-    padding: 50px 30px;
     margin-left: 1%;
 }
 
 .basket{
-  float: right;
-   background: gray;
-    padding: 50px 30px;
+  float: right;   
 }
 </style>
