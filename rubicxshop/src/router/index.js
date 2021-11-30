@@ -6,16 +6,20 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-  path: '/history',
-  component: () => import('@/views/History.vue')
+    path: '/history',
+    component: () => import('@/views/History.vue')
   },
   {
     path: '/login',
     component: () => import('@/views/Login.vue')
-    },
+  },
   {
     path: '/orders',
     component: () => import('@/views/Orders.vue')
+  },
+  {
+    path: '/home',
+    component: () => import('@/views/Home.vue')
   }
   
   
