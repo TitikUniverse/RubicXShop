@@ -1,16 +1,16 @@
 <template>
   <div>
-      <order />
+    <order />
   </div>
 </template>
 
 <script>
 import order from '@/components/order.vue'
 export default {
-    name: 'orders',
-    components:{
-        order
-    }
+  name: 'orders',
+  components:{
+    order
+  }
 }
 </script>
 

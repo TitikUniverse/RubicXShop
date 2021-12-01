@@ -1,14 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-//import { component } from 'vue/types/umd'
 
 Vue.use(VueRouter)
 
 const routes = [
-  {
-    path: '/history',
-    component: () => import('@/views/History.vue')
-  },
   {
     path: '/login',
     component: () => import('@/views/Login.vue')
@@ -18,7 +13,7 @@ const routes = [
     component: () => import('@/views/Orders.vue')
   },
   {
-    path: '/home',
+    path: '/profile',
     component: () => import('@/views/Home.vue')
   }
   
