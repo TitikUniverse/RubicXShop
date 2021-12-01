@@ -50,10 +50,10 @@ export default {
 .material-icons.md-42, .material-icons-outlined.md-42 { font-size: 42px; }
 .material-icons.md-48, .material-icons-outlined.md-48 { font-size: 48px; }
 
-html, body {
-  height: 100%;
+body {
+  min-height: 100vh;
 }
 #app {
-  height: 100%;
+  min-height: 100vh;
 }
 </style>

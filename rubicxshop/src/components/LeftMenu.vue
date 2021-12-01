@@ -33,6 +33,7 @@ export default {
 }
 
 .main-btn {
+  outline:none;
   background-color: transparent;
   border: none;
   color: white;
