@@ -25,7 +25,7 @@
           <div class="second-row">
             <div class="hello">
               <div class="hello-container">
-                <span class="greetings">Привет Ваня</span>
+                <span class="greetings">Привет, {{name}}</span>
                 <span class="description">1010101000100111010010100100101001010100111010101001010101010010101010101</span>
               </div>
             </div>
@@ -121,13 +121,13 @@
           <div class="event-item">
             
           </div>
+        </div>
           <div class="event-item">
             
           </div>
         </div>
 
         <div class="title">
-          <span>Уведомления</span>
         </div>
 
         <div class="notify-item-container">
@@ -135,7 +135,6 @@
 
           </div>
         </div>
-    </div>
   </section>
 </template>
 
@@ -317,7 +316,7 @@ export default {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .main-btn:focus {
@@ -330,12 +329,21 @@ export default {
 
 .hello-container {
   display:flex;
+  width: 70%;
   flex-direction: column;
-  font-size: 20px;
   word-wrap: break-word;
+  padding: 10px 0 0 50px;
+}
+.description{
+  color: #C0C0C0;
+  line-height: 18px;
+  font-size: 13px;
+  font-style: italic;
 }
 
 .greetings {
+  color: #ffffff;
+  font-size: 24px;
   font-weight: bold;
 }
 
