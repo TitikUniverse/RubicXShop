@@ -15,16 +15,12 @@
       </div>
 
       <div class="content">
-        <ul class="cards">
-          <li class="cards-item">
-            <div class="card">
-              <img src="https://i.imgur.com/3kRgbVi.jpg" alt="" class="card-image">
-              <div class="card-content">
-                <div class="сard-title">Название этого товара</div>
-              </div>
-            </div>
-          </li>
-        </ul>
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
       </div>
     </div>
   </section>
@@ -32,10 +28,12 @@
 
 <script>
 import LeftMenu from "../components/LeftMenu.vue";
+import ProductCard from "../components/ProductCard.vue";
 
 export default {
   components: {
     LeftMenu,
+    ProductCard
   },
 };
 </script>
@@ -53,6 +51,9 @@ export default {
 .menu {
   width: 6%;
   border-right: 2px solid rgba(255, 255, 255, 0.513);
+
+  height: 100vh;
+  position: fixed;
 }
 
 .center {
@@ -65,7 +66,7 @@ export default {
 
 .header {
   width: 100%;
-  height: 10%;
+  height: 10vh;
   min-height: 80px;
   border-bottom: 2px solid rgba(255, 255, 255, 0.513);
 

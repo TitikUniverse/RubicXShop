@@ -24,7 +24,10 @@
         <div class="col-7">
           <div class="second-row">
             <div class="hello">
-
+              <div class="hello-container">
+                <span class="greetings">Привет Ваня</span>
+                <span class="description">1010101000100111010010100100101001010100111010101001010101010010101010101</span>
+              </div>
             </div>
           </div>
         </div>
@@ -54,13 +57,43 @@
 
       <div class="row">
         <div class="col-4">
-          <div class="achievements-item"></div>
+          <div class="achievements-item">
+            <img src="https://i.imgur.com/3kRgbVi.jpg" alt="">
+            <div class="text-item">
+              <div class="text-item">
+                <span>11123213211233</span>
+              </div>
+              <div class="text-item">
+                <span>11123123131312</span>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="col-4">
-          <div class="achievements-item"></div>
+          <div class="achievements-item">
+            <img src="https://i.imgur.com/3kRgbVi.jpg" alt="">
+            <div class="text-item">
+              <div class="text-item">
+                <span>11123213211233</span>
+              </div>
+              <div class="text-item">
+                <span>11123123131312</span>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="col-4">
-          <div class="achievements-item"></div>
+          <div class="achievements-item">
+            <img src="https://i.imgur.com/3kRgbVi.jpg" alt="">
+            <div class="text-item">
+              <div class="text-item">
+                <span>11123213211233</span>
+              </div>
+              <div class="text-item">
+                <span>11123123131312</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -86,10 +119,10 @@
 
         <div class="event-item-container">
           <div class="event-item">
-
+            
           </div>
           <div class="event-item">
-
+            
           </div>
         </div>
 
@@ -213,7 +246,7 @@ export default {
 .second-row {
   height: 140px;
 }
-.second-row div {
+.second-row>div {
   width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.379);
@@ -262,9 +295,20 @@ export default {
 }
 
 .achievements-item {
+  display: flex;
+  flex-direction: row;
+  padding: 15px;
   height: 80px;
   background-color: rgba(255, 255, 255, 0.379);
   border-radius: 15px;
+}
+
+.achievements-item>img{
+  border-radius: 10px;
+}
+.text-item{
+  padding: 1px 6px;
+  flex-direction: column;
 }
 
 .main-btn {
@@ -278,6 +322,21 @@ export default {
 
 .main-btn:focus {
   outline: none;
+}
+
+.hello {
+  padding: 20px;
+}
+
+.hello-container {
+  display:flex;
+  flex-direction: column;
+  font-size: 20px;
+  word-wrap: break-word;
+}
+
+.greetings {
+  font-weight: bold;
 }
 
 .analytics{
@@ -295,4 +354,5 @@ export default {
 .purple-color {
   background-color: #694dc6;
 }
+
 </style>

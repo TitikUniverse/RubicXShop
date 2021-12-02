@@ -1,49 +1,116 @@
 <template>
-  <div class="product-card">
-    <img
-      :src="imgUrl" 
-      width="300px"
-    >
-    <div class="product-card__info">
-      <h2>{{ title }}</h2>
-      <p class="price">{{ price }}р.</p>
-      <p class="count">Доступно для доставки {{ count }}шт.</p>
-      <button type="button" @click="addToBasket"> Купить</button>
+  <!-- <ul class="cards">
+    <li class="cards-item">
+      <div class="card">
+        <img src="https://i.imgur.com/3kRgbVi.jpg" alt="" class="card-image">
+        <div class="card-content">
+          <div class="сard-title">Название этого товара</div>
+        </div>
+      </div>
+    </li>
+  </ul> -->
+  <div class='v-cart-item'>
+    <img class="v-cart-item__image" src="https://i.imgur.com/3kRgbVi.jpg" alt="">
+    <div class="v-cart-item__info">
+      <p>футболка</p>
+      <p>01.01.2021</p>
+      <p>12345</p>
     </div>
+    <div class="v-cart-item__quantity">
+      <p>Qty:</p>
+      <span class="quantity__tools">
+        <span class="quantity__btn" >-</span>
+        1
+        <span class="quantity__btn">+</span>
+      </span>
+    </div>
+    <button>Delete</button>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'ProductCard',
-  props: {
-    title: {
-      type: String,
-      validator(value) {
-        return value.length < 50
-      }
-    },
-    price: {
-      type: Number,
-      required: true
-    },
-    imgUrl: {
-      type: String,
-      default: 'https://tsum.by/images/no-photo.png'
-    },
-    count: {
-      type: Number,
-      default: 0
-    }
-  },
-  methods: {
-    addToBasket() {
-      this.$emit('addToBasket')
-    }
-  }
+
 }
 </script>
 
-<style scoped >
+<style lang="scss" scoped>
 
+/* Cards */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.cards-item {
+  display: flex;
+  padding: 1rem;
+
+  @media (min-width: 40rem) {
+    width: 50%;
+  }
+  @media(min-width: 56rem) {
+    width: 33.3333%;
+  }
+}
+.card {
+  background-color: rgba(255, 255, 255, 0.379);
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  &:hover {
+    .card-image {
+      filter: contrast(100%);
+    }
+  }
+}
+.card-image {
+  filter: contrast(70%);
+  //filter: saturate(180%);
+  overflow: hidden;
+  position: relative;
+  transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);;
+  &::before {
+    content: "";
+	  display: block;
+    padding-top: 56.25%; // 16:9 aspect ratio
+  }
+  @media(min-width: 40rem) {
+    &::before {
+      padding-top: 66.6%; // 3:2 aspect ratio
+    }
+  }
+}
+.card-content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 1rem;
+}
+/* End cards */
+
+  .v-cart-item {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 8px 0 #e0e0e0;
+    padding:16px;
+    margin-bottom: 16px;
+    &__image {
+      max-width: 50px;
+    }
+
+    .quantity__btn {
+      cursor: pointer;
+    }
+
+    .quantity__tools {
+      user-select: none;
+    }
+  }
 </style>
