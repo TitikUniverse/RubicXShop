@@ -4,6 +4,7 @@
       <LeftMenu />
     </div>
 
+ 
     <div class="center">
       <div class="header">
         <div class="find-container">
@@ -12,6 +13,10 @@
             <span class="material-icons-outlined md-36 md-light">search</span>
           </button>
         </div>
+      </div>
+
+      <div class="bordertop">
+
       </div>
 
       <div class="content">
@@ -23,6 +28,45 @@
         <ProductCard />
       </div>
     </div>
+
+ <div class="row">
+        <div class="col-7">
+          <div class="analytics"></div>
+        </div>
+        <div class="col-5">
+          <div class="progress"></div>
+        </div>
+      </div>
+
+     <div class="right-side">
+        <div class="user-info">
+          <img src="https://i.imgur.com/3kRgbVi.jpg" alt="">
+          <span>Титов Семён</span>
+        </div>
+
+        <div class="title">
+          <span>Новые ивенты</span>
+        </div>
+
+        <div class="event-item-container">
+          <div class="event-item">
+            
+          </div>
+        </div>
+          <div class="event-item">
+            
+          </div>
+        </div>
+
+        <div class="title">
+        </div>
+
+        <div class="notify-item-container">
+          <div class="notify-item">
+
+          </div>
+        </div>
+      
   </section>
 </template>
 
@@ -42,6 +86,7 @@ export default {
 #shop {
   color: white;
   background: url("../assets/bg.webp");
+   border-top: 2px solid rgba(255, 255, 255, 0.513);
 
   display: flex;
   flex-direction: row;
@@ -51,14 +96,18 @@ export default {
 .menu {
   width: 6%;
   border-right: 2px solid rgba(255, 255, 255, 0.513);
+  
 
   height: 100vh;
   position: fixed;
 }
 
+
 .center {
   width: 70%;
   padding: 30px 100px;
+   border-right: 2px solid rgba(255, 255, 255, 0.513);
+   
 
   display: flex;
   flex-direction: column;
@@ -73,12 +122,23 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
+ 
+}
+
+.bordertop {
+border-top: 2px solid rgba(255, 255, 255, 0.513);
+
+
+ 
 }
 
 .content {
   width: 100%;
   height: 90%;
   min-height: 500px;
+  
+
+  
 }
 
 .find-container {
@@ -90,6 +150,7 @@ export default {
   background-color: rgba(255, 255, 255, 0.379);
   padding: 10px 15px;
   border-radius: 15px;
+ 
 }
 
 .find-container input{
@@ -185,5 +246,65 @@ export default {
 
 .purple-color {
   background-color: #694dc6;
+}
+
+.right-side {
+  width: 24%;
+  padding: 30px 40px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.right-side .user-info {
+  width: 100%;
+  height: 350px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.user-info>img {
+  width: 150px;
+  height: 150px;
+  border-radius: 500px;
+  margin-bottom: 25px;
+}
+
+.user-info>span {
+  font-size: 24px;
+  font-weight: bold;
+}
+.right-side .title {
+  width: 100%;
+  height: 50px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.right-side .event-item-container {
+  width: 100%;
+}
+.right-side .event-item {
+  width: 100%;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.379);
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.right-side .notify-item-container {
+  width: 100%;
+}
+
+.right-side .notify-item {
+  width: 100%;
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.379);
+  border-radius: 15px;
 }
 </style>

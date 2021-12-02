@@ -10,27 +10,28 @@
     </li>
   </ul> -->
   <div class='v-cart-item'>
-    <img class="v-cart-item__image" src="https://i.imgur.com/3kRgbVi.jpg" alt="">
-    <div class="v-cart-item__info">
-      <p>футболка</p>
-      <p>01.01.2021</p>
-      <p>12345</p>
-    </div>
-    <div class="v-cart-item__quantity">
-      <p>Qty:</p>
-      <span class="quantity__tools">
-        <span class="quantity__btn" >-</span>
-        1
-        <span class="quantity__btn">+</span>
-      </span>
-    </div>
-    <button>Delete</button>
+    <img src="" alt="img">
+    <p>Item 1</p>
+    <p>Price: 100</p>
+    <button>Add to cart</button>
   </div>
 </template>
 
 <script>
 export default {
-
+  name: "ProductCard",
+  props:{
+    product_data: {
+      type: Object,
+      default() {
+        return {}
+      }
+    }
+  },
+  data(){
+    return{}
+  },
+  computed:{}
 }
 </script>
 
@@ -101,16 +102,11 @@ export default {
     box-shadow: 0 0 8px 0 #e0e0e0;
     padding:16px;
     margin-bottom: 16px;
-    &__image {
-      max-width: 50px;
-    }
+    width: 291px;
+    height: 191px;
+    float: left;
 
-    .quantity__btn {
-      cursor: pointer;
-    }
-
-    .quantity__tools {
-      user-select: none;
-    }
   }
+
+
 </style>
