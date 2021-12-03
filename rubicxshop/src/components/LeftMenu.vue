@@ -1,10 +1,10 @@
 <template>
   <div class="main">
     <div class="icon-container">
-        <button class="main-btn"><span class="material-icons-outlined md-42 md-light">home</span></button>
-        <button class="main-btn"><span class="material-icons-outlined md-42 md-light">email</span></button>
-        <button class="main-btn"><span class="material-icons-outlined md-42 md-light">import_contacts</span></button>
-        <button class="main-btn"><span class="material-icons-outlined md-42 md-light">local_mall</span></button>
+        <button class="main-btn" href=""><router-link to="/home"><span class="material-icons-outlined md-42 md-light">home</span></router-link></button>
+        <button class="main-btn" href=""><span class="material-icons-outlined md-42 md-light">email</span></button>
+        <button class="main-btn" href=""><span class="material-icons-outlined md-42 md-light">import_contacts</span></button>
+        <button class="main-btn" href=""><router-link to="/shop"><span class="material-icons-outlined md-42 md-light">local_mall</span></router-link></button>
     </div>
   </div>
 </template>

@@ -58,39 +58,39 @@
       <div class="row">
         <div class="col-4">
           <div class="achievements-item">
-            <img src="https://i.imgur.com/3kRgbVi.jpg" alt="">
+            <img src="https://cdn1.flamp.ru/7d4a6fc3523af62949288789f52b7537.jpg" alt="">
             <div class="text-item">
               <div class="text-item">
-                <span>11123213211233</span>
+                <span class="text-achievements-item">11123213211233</span>
               </div>
               <div class="text-item">
-                <span>11123123131312</span>
+                <span class="text-achievements-comment">11123123131312</span>
               </div>
             </div>
           </div>
         </div>
         <div class="col-4">
           <div class="achievements-item">
-            <img src="https://i.imgur.com/3kRgbVi.jpg" alt="">
+            <img src="https://cdn1.flamp.ru/7d4a6fc3523af62949288789f52b7537.jpg" alt="">
             <div class="text-item">
               <div class="text-item">
-                <span>11123213211233</span>
+                <span class="text-achievements-item">11123213211233</span>
               </div>
               <div class="text-item">
-                <span>11123123131312</span>
+                <span class="text-achievements-comment">11123123131312</span>
               </div>
             </div>
           </div>
         </div>
         <div class="col-4">
           <div class="achievements-item">
-            <img src="https://i.imgur.com/3kRgbVi.jpg" alt="">
+            <img src="https://cdn1.flamp.ru/7d4a6fc3523af62949288789f52b7537.jpg" alt="">
             <div class="text-item">
               <div class="text-item">
-                <span>11123213211233</span>
+                <span class="text-achievements-item">11123213211233</span>
               </div>
               <div class="text-item">
-                <span>11123123131312</span>
+                <span class="text-achievements-comment">11123123131312</span>
               </div>
             </div>
           </div>
@@ -109,7 +109,7 @@
 
     <div class="right-side">
         <div class="user-info">
-          <img src="https://i.imgur.com/3kRgbVi.jpg" alt="">
+          <img src="https://cdn1.flamp.ru/7d4a6fc3523af62949288789f52b7537.jpg" alt="">
           <span>Титов Семён</span>
         </div>
 
@@ -119,11 +119,21 @@
 
         <div class="event-item-container">
           <div class="event-item">
-            
+            <img src="https://cdn1.flamp.ru/7d4a6fc3523af62949288789f52b7537.jpg" alt="">
+            <div class="text-item">
+              <span class="text-event-item">11010100101010100111010101001011010101001</span>
+              <p><span class="text-event-item">11010100101010100111010101001011010101001</span></p>
+              <p><span class="text-event-item-opacity">101010010101010011</span></p>
+            </div>
           </div>
         </div>
           <div class="event-item">
-            
+            <img src="https://cdn1.flamp.ru/7d4a6fc3523af62949288789f52b7537.jpg" alt="">
+            <div class="text-item">
+              <span class="text-event-item">11010100101010100111010101001011010101001</span>
+              <p><span class="text-event-item">11010100101010100110101010010101010101001</span></p>
+              <p><span class="text-event-item-opacity">1101010010101010011</span></p>
+          </div>
           </div>
         </div>
 
@@ -214,11 +224,29 @@ export default {
   width: 100%;
 }
 .right-side .event-item {
+  height: 120px;
   width: 100%;
-  height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+  padding: 15px;
   background-color: rgba(255, 255, 255, 0.379);
   border-radius: 15px;
-  margin-bottom: 20px;
+  overflow: hidden;
+}
+.text-event-item-opacity{
+  color: #C0C0C0;
+  line-height: 18px;
+  font-size: 16px;
+  font-style: italic;
+  overflow: hidden;
+  padding: 1px 16px;
+}
+
+.event-item>img {
+  border-radius: 10px;
+  height: 60px;
+  width: 60px;
 }
 
 .right-side .notify-item-container {
@@ -293,6 +321,20 @@ export default {
   font-size: 24px;
 }
 
+.text-achievements-item {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 1px 6px;
+} 
+.text-achievements-comment {
+  color: #C0C0C0;
+  line-height: 18px;
+  font-size: 16px;
+  font-style: italic;
+  padding: 1px 6px;
+}
+
 .achievements-item {
   display: flex;
   flex-direction: row;
@@ -305,8 +347,8 @@ export default {
 .achievements-item>img{
   border-radius: 10px;
 }
-.text-item{
-  padding: 1px 6px;
+.text-event-item{
+  padding: 1px 15px;
   flex-direction: column;
 }
 
