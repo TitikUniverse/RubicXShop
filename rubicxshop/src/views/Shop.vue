@@ -29,43 +29,29 @@
       </div>
     </div>
 
- <div class="row">
-        <div class="col-7">
-          <div class="analytics"></div>
-        </div>
-        <div class="col-5">
-          <div class="progress"></div>
-        </div>
+    <!-- <div class="row">
+      <div class="col-7">
+        <div class="analytics"></div>
       </div>
+      <div class="col-5">
+        <div class="progress"></div>
+      </div>
+    </div> -->
 
      <div class="right-side">
-        <div class="user-info">
-          <img src="https://i.imgur.com/3kRgbVi.jpg" alt="">
-          <span>Титов Семён</span>
-        </div>
-
-        <div class="title">
-          <span>Новые ивенты</span>
-        </div>
-
-        <div class="event-item-container">
-          <div class="event-item">
-            
+        <div class="profile-in-header">
+          <div class="basket"></div>
+          <div class="bookmarks"></div>
+          <div class="profile">
+            <img src="https://cdn1.flamp.ru/7d4a6fc3523af62949288789f52b7537.jpg" alt="">
+            <span>Семен</span>
+            <span>Баланс</span>
           </div>
         </div>
-          <div class="event-item">
-            
-          </div>
-        </div>
+        <div class="description">
 
-        <div class="title">
         </div>
-
-        <div class="notify-item-container">
-          <div class="notify-item">
-
-          </div>
-        </div>
+      </div>
       
   </section>
 </template>
@@ -280,10 +266,7 @@ border-top: 2px solid rgba(255, 255, 255, 0.513);
 .right-side .title {
   width: 100%;
   height: 50px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
+  
 }
 
 .right-side .event-item-container {
@@ -307,4 +290,38 @@ border-top: 2px solid rgba(255, 255, 255, 0.513);
   background-color: rgba(255, 255, 255, 0.379);
   border-radius: 15px;
 }
+
+.profile-in-header {
+  width: 100%;
+  height: 0px;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.profile>img {
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.basket {
+
+}
+
+.bookmarks {
+
+}
+
+.profile {
+  width: 100%;
+  height: 0px;
+
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+}
+
+
 </style>
