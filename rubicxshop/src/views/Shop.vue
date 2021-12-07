@@ -40,12 +40,16 @@
 
      <div class="right-side">
         <div class="profile-in-header">
-          <div class="basket"></div>
-          <div class="bookmarks"></div>
+          <div class="basket">
+            <button class="main-btn" href=""><span class="material-icons-outlined md-42 md-light">local_mall</span></button>
+          </div>
+          <div class="bookmarks">
+            
+          </div>
           <div class="profile">
             <img src="https://cdn1.flamp.ru/7d4a6fc3523af62949288789f52b7537.jpg" alt="">
-            <span>Семен</span>
-            <span>Баланс</span>
+            <span class="name">Семен</span>
+            <span class="balance">Баланс</span>
           </div>
         </div>
         <div class="description">
@@ -90,8 +94,8 @@ export default {
 
 
 .center {
-  width: 70%;
-  padding: 30px 100px;
+  width: 75%;
+  padding: 2% 6% 0% 14%;
    border-right: 2px solid rgba(255, 255, 255, 0.513);
    
 
@@ -122,9 +126,7 @@ border-top: 2px solid rgba(255, 255, 255, 0.513);
   width: 100%;
   height: 90%;
   min-height: 500px;
-  
-
-  
+  padding: 30px 50px;  
 }
 
 .find-container {
@@ -293,7 +295,7 @@ border-top: 2px solid rgba(255, 255, 255, 0.513);
 
 .profile-in-header {
   width: 100%;
-  height: 0px;
+  height: 2px;
   
   display: flex;
   flex-direction: column;
@@ -307,16 +309,28 @@ border-top: 2px solid rgba(255, 255, 255, 0.513);
 }
 
 .basket {
-
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
 }
 
 .bookmarks {
 
 }
 
+.name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.balance {
+  font-size: 14px;
+  font-weight: lighter;
+}
+
 .profile {
   width: 100%;
-  height: 0px;
+  height: 90px;
 
   display: flex;
   flex-direction: column;
