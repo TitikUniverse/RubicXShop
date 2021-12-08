@@ -37,7 +37,7 @@
      <div class="right-side">
         <div class="profile-in-header">
           <div class="basket">
-            <button class="main-btn" href=""><span class="material-icons-outlined md-42 md-light">local_mall</span></button>
+            <button class="main-btn purple-color" href=""><span class="material-icons-outlined md-36 md-light">local_mall</span></button>
           </div>
           
           <div class="profile">
@@ -102,7 +102,7 @@ export default {
   flex-direction: column;
 
   @media only screen and (min-device-width: 480px) {
-    border-right: 2px solid rgba(255, 255, 255, 0.513);
+    // border-right: 2px solid rgba(255, 255, 255, 0.513);
     position: relative;
     left: 6%;
     width: 70%;
@@ -117,18 +117,11 @@ export default {
   height: 10vh;
   padding: 0px 50px;
   min-height: 80px;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.513);
+  // border-bottom: 2px solid rgba(255, 255, 255, 0.513);
 
   display: flex;
   flex-direction: column;
   justify-content: center;
- 
-}
-
-.bordertop {
-border-top: 2px solid rgba(255, 255, 255, 0.513);
-
-
  
 }
 
@@ -183,69 +176,12 @@ border-top: 2px solid rgba(255, 255, 255, 0.513);
   border-radius: 10px;
   
 
-  width: 48px;
+  width: 45px;
   height: 42px;
 }
 .main-btn:focus {
   outline: none;
 }
-
-/* Cards */
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.cards-item {
-  display: flex;
-  padding: 1rem;
-
-  @media (min-width: 40rem) {
-    width: 50%;
-  }
-  @media(min-width: 56rem) {
-    width: 33.3333%;
-  }
-}
-.card {
-  background-color: rgba(255, 255, 255, 0.379);
-  border-radius: 0.25rem;
-  box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  &:hover {
-    .card-image {
-      filter: contrast(100%);
-    }
-  }
-}
-.card-image {
-  filter: contrast(70%);
-  //filter: saturate(180%);
-  overflow: hidden;
-  position: relative;
-  transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);;
-  &::before {
-    content: "";
-	  display: block;
-    padding-top: 56.25%; // 16:9 aspect ratio
-  }
-  @media(min-width: 40rem) {
-    &::before {
-      padding-top: 66.6%; // 3:2 aspect ratio
-    }
-  }
-}
-.card-content {
-  display: flex;
-  flex: 1 1 auto;
-  flex-direction: column;
-  padding: 1rem;
-}
-/* End cards */
 
 .purple-color {
   background-color: #694dc6;
@@ -321,15 +257,14 @@ border-top: 2px solid rgba(255, 255, 255, 0.513);
   min-height: 80px;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.513)
+  // border-bottom: 2px solid rgba(255, 255, 255, 0.513)
 }
 .profile>img {
-  width: 50px;
-  height: 50px;
-  border-radius: 15px;
-  margin-bottom: 15px;
+  width: 45px;
+  height: 42px;
+  border-radius: 10px;
 }
 .profile>.profile-info {
   display: flex;
@@ -337,17 +272,10 @@ border-top: 2px solid rgba(255, 255, 255, 0.513);
   padding-left: 15px;
 }
 .basket {
-  width: 50px;
-  height: 50px;
-  border-radius: 15px;
-  
-}
-.basket>button{
-  width: 50px;
-  height: 50px;
-  border-radius: 15px;
-  padding: 0px 0px 0px 0px;
-  background-color: #694dc6;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  margin-right: 25px;
 }
 
 .description {
@@ -368,7 +296,6 @@ border-top: 2px solid rgba(255, 255, 255, 0.513);
 .profile {
   display: flex;
   flex-direction: row;
-  padding-top: 15px;
 }
 
 
