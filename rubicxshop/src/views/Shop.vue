@@ -86,20 +86,30 @@ export default {
 
   height: 100vh;
   position: fixed;
+
+  @media only screen and (max-device-width: 480px) {
+    display: none;
+  }
 }
 
 
 .center {
-  width: 70%;
+  
   padding: 0px 0px;
-  border-right: 2px solid rgba(255, 255, 255, 0.513);
-
-  position: relative;
-  left: 6%;
    
 
   display: flex;
   flex-direction: column;
+
+  @media only screen and (min-device-width: 480px) {
+    border-right: 2px solid rgba(255, 255, 255, 0.513);
+    position: relative;
+    left: 6%;
+    width: 70%;
+  }
+  @media only screen and (max-device-width: 479px) {
+    width: 100%;
+  }
 }
 
 .header {
@@ -126,7 +136,11 @@ border-top: 2px solid rgba(255, 255, 255, 0.513);
   width: 100%;
   height: 90%;
   min-height: 500px;
-  padding: 30px 50px;  
+  padding: 20px 0px;  
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .find-container {
@@ -247,6 +261,10 @@ border-top: 2px solid rgba(255, 255, 255, 0.513);
 
   position: fixed;
   right: 0px;
+
+  @media only screen and (max-device-width: 480px) {
+    display: none;
+  }
 }
 
 .right-side .user-info {
@@ -316,7 +334,7 @@ border-top: 2px solid rgba(255, 255, 255, 0.513);
 .profile>.profile-info {
   display: flex;
   flex-direction: column;
-  padding-left: 20px;
+  padding-left: 15px;
 }
 .basket {
   width: 50px;

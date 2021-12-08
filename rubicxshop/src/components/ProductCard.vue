@@ -32,7 +32,7 @@ export default {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    width: 291px;
+    width: 16rem;
     float: left;
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.379);
