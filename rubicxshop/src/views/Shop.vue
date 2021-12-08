@@ -15,10 +15,6 @@
         </div>
       </div>
 
-      <div class="bordertop">
-
-      </div>
-
       <div class="content">
         <ProductCard />
         <ProductCard />
@@ -43,17 +39,17 @@
           <div class="basket">
             <button class="main-btn" href=""><span class="material-icons-outlined md-42 md-light">local_mall</span></button>
           </div>
-          <div class="bookmarks">
-            
-          </div>
+          
           <div class="profile">
             <img src="https://cdn1.flamp.ru/7d4a6fc3523af62949288789f52b7537.jpg" alt="">
-            <span class="name">Семен</span>
-            <span class="balance">Баланс</span>
+            <div class="profile-info">
+              <span class="name">Семен</span>
+              <span class="balance">Баланс</span></div>
           </div>
         </div>
-        <div class="description">
 
+        <div class="description">
+          
         </div>
       </div>
       
@@ -76,7 +72,7 @@ export default {
 #shop {
   color: white;
   background: url("../assets/bg.webp");
-   border-top: 2px solid rgba(255, 255, 255, 0.513);
+   
 
   display: flex;
   flex-direction: row;
@@ -94,9 +90,12 @@ export default {
 
 
 .center {
-  width: 75%;
-  padding: 2% 6% 0% 14%;
-   border-right: 2px solid rgba(255, 255, 255, 0.513);
+  width: 70%;
+  padding: 0px 0px;
+  border-right: 2px solid rgba(255, 255, 255, 0.513);
+
+  position: relative;
+  left: 6%;
    
 
   display: flex;
@@ -106,6 +105,7 @@ export default {
 .header {
   width: 100%;
   height: 10vh;
+  padding: 0px 50px;
   min-height: 80px;
   border-bottom: 2px solid rgba(255, 255, 255, 0.513);
 
@@ -239,11 +239,14 @@ border-top: 2px solid rgba(255, 255, 255, 0.513);
 
 .right-side {
   width: 24%;
-  padding: 30px 40px;
+  padding: 0px 0px;
 
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+
+  position: fixed;
+  right: 0px;
 }
 
 .right-side .user-info {
@@ -296,29 +299,42 @@ border-top: 2px solid rgba(255, 255, 255, 0.513);
 
 .profile-in-header {
   width: 100%;
-  height: 2px;
+  height: 10vh;
+  min-height: 80px;
   display: flex;
   flex-direction: row;
-  
-  
- 
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.513)
 }
-
 .profile>img {
   width: 50px;
   height: 50px;
   border-radius: 15px;
   margin-bottom: 15px;
 }
-
+.profile>.profile-info {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
 .basket {
   width: 50px;
   height: 50px;
   border-radius: 15px;
+  
+}
+.basket>button{
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  padding: 0px 0px 0px 0px;
+  background-color: #694dc6;
 }
 
-.bookmarks {
-
+.description {
+  width: 100%;
+  height: 90vh;
 }
 
 .name {
@@ -332,12 +348,9 @@ border-top: 2px solid rgba(255, 255, 255, 0.513);
 }
 
 .profile {
-  width: 100%;
-  height: 90px;
-
   display: flex;
-  flex-direction: column;
-  padding-top: 10px;
+  flex-direction: row;
+  padding-top: 15px;
 }
 
 
