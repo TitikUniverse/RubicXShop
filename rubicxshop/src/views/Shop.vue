@@ -166,7 +166,8 @@ border-top: 2px solid rgba(255, 255, 255, 0.513);
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  border-radius: 5px;
+  border-radius: 10px;
+  
 
   width: 48px;
   height: 42px;
@@ -296,9 +297,11 @@ border-top: 2px solid rgba(255, 255, 255, 0.513);
 .profile-in-header {
   width: 100%;
   height: 2px;
-  
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  
+  
+ 
 }
 
 .profile>img {
