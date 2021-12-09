@@ -3,25 +3,19 @@
     <div class="menu">
       <LeftMenu />
     </div>
-
  
     <div class="center">
       <div class="header">
         <div class="find-container">
           <input type="text" placeholder="Поиск" />
-          <button class="main-btn purple-color">
+          <button id="find-btn" class="main-btn purple-color">
             <span class="material-icons-outlined md-36 md-light">search</span>
           </button>
         </div>
-      </div>
+      </div> 
 
       <div class="content">
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+        <ProductCard v-for="item in productDataTest" :key="item.name" :productData=item />
       </div>
     </div>
 
@@ -41,18 +35,25 @@
           </div>
           
           <div class="profile">
-            <img src="https://cdn1.flamp.ru/7d4a6fc3523af62949288789f52b7537.jpg" alt="">
+            <img src="https://avatars.mds.yandex.net/i?id=56933482d1f5e49b2df48e511b1fecc6-5558158-images-thumbs&n=13" alt="">
             <div class="profile-info">
-              <span class="name">Семен</span>
-              <span class="balance">Баланс</span></div>
+              <span class="name">Семён</span>
+              <span class="balance">Баланс: 100 R</span></div>
           </div>
         </div>
 
-        <div class="description">
-          
+        <div class="selected-product">
+          <img id="image" src="https://cdn1.ozone.ru/s3/multimedia-h/6044086553.jpg" alt="">
+          <div class="selected-product-item">
+            <div id="price" class="orange-color">
+              <span>100 R</span>
+            </div>
+            <span id="name">Коврик для мышки</span>
+            <span id="description">Самый лучший коврик для мышки. Очень мягкий и шелковистый</span>
+            <button id="buy-btn" class="main-btn orange-color">Купить</button>
+          </div>
         </div>
       </div>
-      
   </section>
 </template>
 
@@ -65,6 +66,21 @@ export default {
     LeftMenu,
     ProductCard
   },
+  data() {
+    return {
+      productDataTest: [
+        { name: "Мышка", imageUrl: "https://yt3.ggpht.com/a/AGF-l79qNv-LqiuIhbkJ7trtdWLdAebjaJSGtJgSwA=s900-c-k-c0xffffffff-no-rj-mo", price: 100 },
+        { name: "Коврик", imageUrl: "https://yt3.ggpht.com/a/AGF-l79qNv-LqiuIhbkJ7trtdWLdAebjaJSGtJgSwA=s900-c-k-c0xffffffff-no-rj-mo", price: 250 },
+        { name: "Ручка", imageUrl: "https://yt3.ggpht.com/a/AGF-l79qNv-LqiuIhbkJ7trtdWLdAebjaJSGtJgSwA=s900-c-k-c0xffffffff-no-rj-mo", price: 50 },
+        { name: "Ластик", imageUrl: "https://yt3.ggpht.com/a/AGF-l79qNv-LqiuIhbkJ7trtdWLdAebjaJSGtJgSwA=s900-c-k-c0xffffffff-no-rj-mo", price: 300 },
+        { name: "Браслет", imageUrl: "https://yt3.ggpht.com/a/AGF-l79qNv-LqiuIhbkJ7trtdWLdAebjaJSGtJgSwA=s900-c-k-c0xffffffff-no-rj-mo", price: 500 },
+        { name: "Кружка", imageUrl: "https://yt3.ggpht.com/a/AGF-l79qNv-LqiuIhbkJ7trtdWLdAebjaJSGtJgSwA=s900-c-k-c0xffffffff-no-rj-mo", price: 240 },
+        { name: "Повербанк", imageUrl: "https://yt3.ggpht.com/a/AGF-l79qNv-LqiuIhbkJ7trtdWLdAebjaJSGtJgSwA=s900-c-k-c0xffffffff-no-rj-mo", price: 10 },
+        { name: "Худи", imageUrl: "https://yt3.ggpht.com/a/AGF-l79qNv-LqiuIhbkJ7trtdWLdAebjaJSGtJgSwA=s900-c-k-c0xffffffff-no-rj-mo", price: 700 },
+        { name: "Футболка", imageUrl: "https://yt3.ggpht.com/a/AGF-l79qNv-LqiuIhbkJ7trtdWLdAebjaJSGtJgSwA=s900-c-k-c0xffffffff-no-rj-mo", price: 320 },
+      ]
+    }
+  }
 };
 </script>
 
@@ -72,7 +88,6 @@ export default {
 #shop {
   color: white;
   background: url("../assets/bg.webp");
-   
 
   display: flex;
   flex-direction: row;
@@ -81,11 +96,9 @@ export default {
 
 .menu {
   width: 6%;
-  border-right: 2px solid rgba(255, 255, 255, 0.513);
-  
-
   height: 100vh;
   position: fixed;
+  border-right: 2px solid rgba(255, 255, 255, 0.513);
 
   @media only screen and (max-device-width: 480px) {
     display: none;
@@ -94,15 +107,13 @@ export default {
 
 
 .center {
-  
   padding: 0px 0px;
-   
 
   display: flex;
   flex-direction: column;
 
   @media only screen and (min-device-width: 480px) {
-    // border-right: 2px solid rgba(255, 255, 255, 0.513);
+    border-right: 2px solid rgba(255, 255, 255, 0.513);
     position: relative;
     left: 6%;
     width: 70%;
@@ -129,7 +140,7 @@ export default {
   width: 100%;
   height: 90%;
   min-height: 500px;
-  padding: 20px 0px;  
+  padding: 20px 0px;
 
   display: flex;
   flex-wrap: wrap;
@@ -167,6 +178,10 @@ export default {
   border: none;
   outline: none;
 }
+.find-container #find-btn {
+  width: 45px;
+  height: 42px;
+}
 .main-btn {
   border: none;
   /* padding: 5px 5px; */
@@ -174,10 +189,8 @@ export default {
   text-decoration: none;
   display: inline-block;
   border-radius: 10px;
-  
 
-  width: 45px;
-  height: 42px;
+  transition: all 0.2s;
 }
 .main-btn:focus {
   outline: none;
@@ -185,6 +198,9 @@ export default {
 
 .purple-color {
   background-color: #694dc6;
+}
+.orange-color {
+  background-color: #eb704d;
 }
 
 .right-side {
@@ -261,6 +277,18 @@ export default {
   align-items: center;
   // border-bottom: 2px solid rgba(255, 255, 255, 0.513)
 }
+
+.profile-in-header .basket {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  margin-right: 25px;
+}
+
+.profile-in-header .profile {
+  display: flex;
+  flex-direction: row;
+}
 .profile>img {
   width: 45px;
   height: 42px;
@@ -271,31 +299,75 @@ export default {
   flex-direction: column;
   padding-left: 15px;
 }
-.basket {
-  width: 42px;
-  height: 42px;
-  border-radius: 10px;
-  margin-right: 25px;
-}
-
-.description {
-  width: 100%;
-  height: 90vh;
-}
-
-.name {
+.profile-info .name {
   font-size: 16px;
   font-weight: bold;
 }
-
-.balance {
+.profile-info .balance {
   font-size: 14px;
   font-weight: lighter;
 }
 
-.profile {
+.selected-product {
+  width: 100%;
+  // min-width: 300px;
+  height: 90vh;
+  min-height: 500px;
+
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+}
+
+.selected-product>img {
+  width: 85%;
+  margin-top: 30px;
+  min-height: 150px;
+  max-height: 300px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+.selected-product-item {
+  width: 85%;
+  margin-top: 25px;
+
+  display: flex;
+  flex-direction: column;
+}
+.selected-product-item #price {
+  text-align: center;
+  font-weight: 650;
+  font-size: 18px;
+  padding: 5px;
+  width: 30%;
+  border-radius: 10px;
+}
+.selected-product-item #name {
+  text-align: left;
+  word-wrap: break-word;
+  font-weight: 650;
+  font-size: 18px;
+  margin-top: 15px;
+}
+.selected-product-item #description {
+  text-align: left;
+  word-wrap: break-word;
+  font-weight: 300;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.808);
+
+  margin-top: 15px;
+}
+.selected-product-item #buy-btn {
+  padding: 10px;
+  margin-top: 15px;
+  border: 2px solid transparent;
+  color: white;
+}
+.selected-product-item #buy-btn:hover {
+  background-color: #eb6f4d28;
+  border: 2px solid #eb704d;
 }
 
 
