@@ -14,11 +14,15 @@ const routes = [
   },
   {
     path: '/home',
-    component: () => import('@/views/Home.vue')
+    component: () => import('@/views/Profile.vue')
   },
   {
     path: '/orders',
     component: () => import('@/views/Orders.vue')
+  },
+  {
+    path: '/add',
+    component: () => import('@/views/AddNewProduct.vue')
   }
   
   

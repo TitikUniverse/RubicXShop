@@ -158,7 +158,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 #home {
   color: white;
   background: url("../assets/bg.webp");
@@ -168,9 +168,18 @@ export default {
   min-height: 100vh;
   /* align-items: stretch; */
 }
+.col-5{
+  @media only screen and (max-device-width: 900px){
+    display: none;
+  }
+}
 .menu {
   width: 6%;
   border-right: 2px solid rgba(255, 255, 255, 0.513);
+
+  @media only screen and (max-device-width: 480px) {
+    display: none;
+  }
 }
 .content {
   width: 70%;
@@ -280,11 +289,23 @@ export default {
   border-radius: 15px;
   padding: 10px 15px;
 }
-.first-row .find-container {
+.first-row{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+
+.find-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 70%;
+  background-color: rgba(255, 255, 255, 0.379);
+  padding: 10px 15px;
+  border-radius: 15px;
+}
+
 .find-container input {
   display: block;
   width: 100%;
@@ -371,10 +392,14 @@ export default {
 
 .hello-container {
   display:flex;
-  width: 70%;
+  width: 100%;
   flex-direction: column;
   word-wrap: break-word;
   padding: 10px 0 0 50px;
+
+  @media only screen and (max-device-width: 900px) {
+    width: 100%;
+  }
 }
 .description{
   color: #C0C0C0;
