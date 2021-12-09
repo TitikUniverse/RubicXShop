@@ -4,10 +4,27 @@
       <LeftMenu />
     </div>
     <div class="center">
-      <input placeholder="Добавить товар" />
+      <div class="header">
+        <div class="find-container">
+          <input type="text" placeholder="Добавить название товара" />
+        </div>
+      </div> 
+      <div class="header">
+        <div class="find-container">
+          <input type="text" placeholder="Добавить изображение товара" />
+        </div>
+      </div> 
+      <div class="header">
+        <div class="find-container">
+          <input type="text" placeholder="Добавить описание товара" />
+        </div>
+      </div> 
+      <div class="header">
+        <div class="find-container">
+          <input type="text" placeholder="Добавить название товара" />
+        </div>
+      </div>
     </div>
-
-    
   </section>
 </template>
 
@@ -50,10 +67,38 @@ color: white;
   @media only screen and (min-device-width: 480px) {
     position: relative;
     left: 6%;
-    width: 13%;
+    width: 23%;
   }
   @media only screen and (max-device-width: 479px) {
-    width: 27%;
+    width: 37%;
   }
 }
+.find-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 70%;
+  background-color: rgba(255, 255, 255, 0.379);
+  padding: 10px 15px;
+  border-radius: 15px;
+ 
+}
+
+.find-container input{
+  display: block;
+  width: 100%;
+  padding: 8px 16px;
+  line-height: 25px;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  font-weight: 500;
+}
+.find-container input::placeholder {
+  color: white;
+}
+
 </style>
