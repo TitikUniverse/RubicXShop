@@ -31,15 +31,18 @@
      <div class="right-side">
         <div class="profile-in-header">
           <div class="basket">
+            <router-link to="/orders">
             <button class="main-btn purple-color" href=""><span class="material-icons-outlined md-36 md-light">local_mall</span></button>
+            </router-link>
           </div>
-          
+          <router-link to="/profile">
           <div class="profile">
             <img src="https://avatars.mds.yandex.net/i?id=56933482d1f5e49b2df48e511b1fecc6-5558158-images-thumbs&n=13" alt="">
             <div class="profile-info">
               <span class="name">Семён</span>
               <span class="balance">Баланс: 100 R</span></div>
           </div>
+          </router-link>
         </div>
 
         <div class="selected-product">

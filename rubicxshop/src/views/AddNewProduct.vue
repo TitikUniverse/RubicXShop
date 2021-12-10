@@ -24,6 +24,12 @@
           <input type="text" placeholder="Добавить название товара" />
         </div>
       </div>
+        <div class="save">
+          <button id="cancel-btn" class="main-btn red-color">Отменить</button>
+          <button id="save-btn" class="main-btn green-color">Сохранить</button>
+
+        </div>
+        
     </div>
   </section>
 </template>
@@ -67,10 +73,10 @@ color: white;
   @media only screen and (min-device-width: 480px) {
     position: relative;
     left: 6%;
-    width: 23%;
+    width: 70%;
   }
   @media only screen and (max-device-width: 479px) {
-    width: 37%;
+    width: 100%;
   }
 }
 .find-container {
@@ -99,6 +105,37 @@ color: white;
 }
 .find-container input::placeholder {
   color: white;
+}
+#save-btn:hover {
+  background-color: #7feb4d;
+  border: 2px solid white;
+}
+.save{
+  display: flex;
+  justify-content: center ;
+  
+}
+#cancel-btn {
+  margin-right: 15px;
+}
+#cancel-btn:hover {
+  background-color: #fb5555;
+  border: 2px solid white;
+}
+
+.main-btn {
+  border: none;
+  padding: 8px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 10px;
+  border: 2px solid transparent;
+
+  transition: all 0.2s;
+}
+.main-btn:focus {
+  outline: none;
 }
 
 </style>
