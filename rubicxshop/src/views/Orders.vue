@@ -9,7 +9,7 @@
           <div class="find-container">
             <img data-v-ea19b9a0="" src="https://cdn1.ozone.ru/s3/multimedia-h/6044086553.jpg" alt="">
              <img rrr="" src="https://i.gifer.com/7kRE.gif" alt="">
-              <order />
+              
           </div>
         </div>
 
@@ -108,7 +108,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   height: 11%;
-  background-color: rgba(255, 255, 255, 0.959);
+  background-color: rgb(241 250 254);
   padding: 10px 15px;
   border-radius: 15px;
   margin-top: 103px;

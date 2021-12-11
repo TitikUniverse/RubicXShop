@@ -148,6 +148,8 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  
 }
 
 .find-container {
@@ -159,6 +161,7 @@ export default {
   background-color: rgba(255, 255, 255, 0.379);
   padding: 10px 15px;
   border-radius: 15px;
+  
  
 }
 
@@ -185,7 +188,7 @@ export default {
   width: 45px;
   height: 42px;
 }
-.main-btn {
+.main-btn  {
   border: none;
   /* padding: 5px 5px; */
   text-align: center;
@@ -199,7 +202,7 @@ export default {
   outline: none;
 }
 
-.purple-color {
+.purple-color  {
   background-color: #694dc6;
 }
 .orange-color {
@@ -305,7 +308,9 @@ export default {
 .profile-info .name {
   font-size: 16px;
   font-weight: bold;
+  
 }
+
 .profile-info .balance {
   font-size: 14px;
   font-weight: lighter;

@@ -47,7 +47,7 @@ export default {
   border-radius: 20px;
 }
 
-.buy-btn {
+.buy-btn  {
   border: none;
   text-align: center;
   text-decoration: none;
