@@ -12,15 +12,25 @@
                 </div>
            <div class="OrderTime">
                 <span class="Title">Ожидание</span>
-                </div>
+            </div>
+        </container>
         
-          
-      </container>
+        
+        
+      
   </div>
 </template>
 
 <script>
+import OrdersCard from "./OrdersCard";
+
+
 export default {
+name: "Order",
+    components: {
+        OrdersCard,
+       
+    },
 
 }
 </script>

@@ -5,10 +5,14 @@
     </div>
 
       <div class="center">
-        <div class="find-container">
-          <img data-v-ea19b9a0="" src="https://avatars.mds.yandex.net/i?id=56933482d1f5e49b2df48e511b1fecc6-5558158-images-thumbs&amp;n=13" alt="">
-          <orders v-for="item in productDataTest" :key="item.name" :productData=item />
+        <div class="brd">
+          <div class="find-container">
+            <img data-v-ea19b9a0="" src="https://cdn1.ozone.ru/s3/multimedia-h/6044086553.jpg" alt="">
+             <img rrr="" src="https://i.gifer.com/7kRE.gif" alt="">
+              <order />
+          </div>
         </div>
+
         <div class="header">
          
           </div>
@@ -22,13 +26,17 @@
 <script>
 import order from '@/components/order.vue'
 import LeftMenu from "../components/LeftMenu.vue";
+import OrdersCard from "../components/OrdersCard.vue"
 export default {
   name: 'orders',
   components:{
     order,
-    LeftMenu
-  }
+    LeftMenu,
+    OrdersCard
+  },
+
 }
+
 </script>
 
 <style lang="scss" scoped>
@@ -99,11 +107,11 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 17%;
-  background-color: rgba(255, 255, 255, 0.379);
+  height: 11%;
+  background-color: rgba(255, 255, 255, 0.959);
   padding: 10px 15px;
   border-radius: 15px;
-  margin-top: 179px;
+  margin-top: 103px;
   
  
 }
@@ -137,5 +145,22 @@ export default {
     border-radius: 10px;
     margin-left: 11px;
 }
+
+.find-container > img[rrr] {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    margin-left: 515px;
+}
+
+.brd {
+    border: 2px solid rgb(148, 148, 148); /* Параметры границы */
+    padding: 10px; /* Поля вокруг текста */
+    width: 700px;
+    height: 1000px;
+    margin-left: 10px;
+    margin-top: 10px;
+   }
+  
 </style>
 
