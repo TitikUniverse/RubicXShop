@@ -5,7 +5,7 @@
     </div>
 
     <div class="center">
-      <OrderCard v-for="item in productDataTest" :key="item.name" :productData="item" />
+      <OrderCard v-for="item in productDataTest" :key="item.name" :productData="item"  />
     </div> 
   </section>
 </template>
@@ -38,10 +38,10 @@ export default {
 #orders {
   color: white;
   background: url("../assets/bg.webp");
-
   display: flex;
   flex-direction: row;
   min-height: 100vh;
+  
 }
 
 .menu {
@@ -59,7 +59,6 @@ export default {
 .center {
   padding: 0px 0px;
   margin-top: 50px;
-
   display: flex;
   flex-direction: column;
 

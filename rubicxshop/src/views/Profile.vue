@@ -50,6 +50,26 @@ export default {
 </script>
 
 <style>
+#home{
+  color: white;
+  background: url("../assets/bg.webp");
+
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+.menu {
+  width: 6%;
+  height: 100vh;
+  position: fixed;
+  border-right: 2px solid rgba(255, 255, 255, 0.513);
+
+  @media only screen and (max-device-width: 480px) {
+    display: none;
+  }
+}
+
 #logo>img{
   width:200px;
 }
@@ -72,6 +92,11 @@ export default {
   padding: 10px 10px 10px;
 }
 
-
+.content{
+  display: flex;
+ flex-direction: column;
+ padding: 0px 20%;
+ margin-top: 50px;
+}
 
 </style>
