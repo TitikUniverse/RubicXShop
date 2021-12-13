@@ -35,7 +35,7 @@
             <button class="main-btn purple-color" href=""><span class="material-icons-outlined md-36 md-light">local_mall</span></button>
             </router-link>
           </div>
-          <router-link to="/profile">
+          <router-link to="/profile" tag="div">
           <div class="profile">
             <img src="https://avatars.mds.yandex.net/i?id=56933482d1f5e49b2df48e511b1fecc6-5558158-images-thumbs&n=13" alt="">
             <div class="profile-info">
@@ -294,6 +294,7 @@ export default {
 .profile-in-header .profile {
   display: flex;
   flex-direction: row;
+  cursor: pointer;
 }
 .profile>img {
   width: 45px;

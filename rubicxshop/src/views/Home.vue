@@ -108,11 +108,12 @@
     </div>
 
     <div class="right-side">
+      <router-link to="/profile" tag="div">
         <div class="user-info">
           <img src="https://cdn1.flamp.ru/7d4a6fc3523af62949288789f52b7537.jpg" alt="">
           <span>Титов Семён</span>
         </div>
-
+      </router-link>
         <div class="title">
           <span>Новые ивенты</span>
         </div>
@@ -202,7 +203,7 @@ export default {
 .right-side .user-info {
   width: 100%;
   height: 350px;
-
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -218,6 +219,7 @@ export default {
 .user-info>span {
   font-size: 24px;
   font-weight: bold;
+  
 }
 
 .right-side .title {
