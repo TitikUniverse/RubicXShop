@@ -206,7 +206,7 @@ export default {
   background-color: #694dc6;
 }
 .orange-color {
-  background-color: #eb704d;
+  background-color: #694dc6;
 }
 
 .right-side {
@@ -376,7 +376,7 @@ export default {
 }
 .selected-product-item #buy-btn:hover {
   background-color: #eb6f4d28;
-  border: 2px solid #eb704d;
+  border: 2px solid #694dc6;
 }
 
 

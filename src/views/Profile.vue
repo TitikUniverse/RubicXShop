@@ -125,9 +125,7 @@ table{
   font-family: sans-serif;
   border-collapse: separate;
   border-spacing: 5px;
-  background: rgb(20, 112, 84);
   color: rgb(255, 255, 255);
-  border: 16px solid rgb(21, 74, 124);
   border-radius: 20px;
   
 
@@ -138,7 +136,8 @@ th{
 
 }
 td{
-  background: rgb(170, 164, 127);
+  background: rgb(139, 0, 255);
+  text-align: center;
   padding: 10px;
   font-weight: bold;
   font-size: 20px;
