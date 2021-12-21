@@ -9,7 +9,7 @@
         <div class="find-container">
           <input type="text" placeholder="Поиск" />
           <button id="find-btn" class="main-btn purple-color">
-            <span class="material-icons-outlined md-36 md-light">search</span>
+            <div class="material-icons-outlined md-36 md-light">search</div>
           </button>
         </div>
       </div> 
@@ -49,7 +49,8 @@
           <img id="image" src="https://cdn1.ozone.ru/s3/multimedia-h/6044086553.jpg" alt="">
           <div class="selected-product-item">
             <div id="price" class="orange-color">
-              <span>100 R</span>
+              <span>100</span>
+              <img id="image" src="https://pngimage.net/wp-content/uploads/2018/06/r-logo-png-4.png" alt="">
             </div>
             <span id="name">Коврик для мышки</span>
             <span id="description">Самый лучший коврик для мышки. Очень мягкий и шелковистый</span>
@@ -136,8 +137,14 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
- 
+
+  @media only screen and (max-device-width: 479px) {
+
+    padding: 0px 10px 0 80px  ;
+  }
 }
+
+
 
 .content {
   width: 100%;
@@ -162,7 +169,7 @@ export default {
   padding: 10px 15px;
   border-radius: 15px;
   
- 
+
 }
 
 .find-container input{
@@ -170,12 +177,14 @@ export default {
   width: 100%;
   padding: 8px 16px;
   line-height: 25px;
-  font-size: 14px;
+  font-size: 18px;
   border: none;
   outline: none;
   background-color: transparent;
   color: white;
   font-weight: 500;
+
+  
 }
 .find-container input::placeholder {
   color: white;
@@ -377,6 +386,12 @@ export default {
 .selected-product-item #buy-btn:hover {
   background-color: #eb6f4d28;
   border: 2px solid #694dc6;
+}
+#price>img {
+  height: 20px;
+  width: 20px;
+  margin-top: -3px;
+  margin-left: 3px;
 }
 
 

@@ -31,6 +31,10 @@ const routes = [
   {
     path: '/profile',
     component: () => import('@/views/Profile.vue')
+  },
+  {
+    path: '/admincoin',
+    component: () => import('@/views/AdminCoin.vue')
   }
   
   

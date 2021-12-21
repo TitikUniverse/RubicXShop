@@ -5,6 +5,7 @@
     </div>
 
     <div class="center">
+      <h1>Лист ожиданий</h1>
       <OrderCard v-for="item in productDataTest" :key="item.name" :productData="item"  />
     </div> 
   </section>
@@ -70,6 +71,10 @@ export default {
   @media only screen and (max-device-width: 479px) {
     width: 100%;
   }
+}
+
+.center>h1 {
+  text-align: center;
 }
 </style>
 

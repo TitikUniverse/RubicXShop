@@ -3,7 +3,9 @@
     <img :src=productData.imageUrl alt="img">
     <span id="name">{{productData.name}}</span>
     <div id="bottom">
-      <span id="price">{{productData.price}} R</span>
+      <span id="price">{{productData.price}} 
+      <img id="image" src="https://pngimage.net/wp-content/uploads/2018/06/r-logo-png-4.png" alt="">
+      </span>
       <button class="buy-btn purple-color">Подробнее</button>
     </div>
     
@@ -48,16 +50,34 @@ export default {
 }
 
 .buy-btn  {
-  border: none;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 10px;
+  z-index: 1;
+  position: relative;
+  font-size: inherit;
+  font-family: inherit;
   color: white;
-  padding: 5px 10px;
+  padding: 0.5em 1em;
+  outline: none;
+  border: none;
+  background-color: hsl(236, 32%, 26%);
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top: -2px;
+}
+.buy-btn::after {
+  content: '';
+  z-index: -1;
+  background-color: hsla(0, 0%, 100%, 0.2);
+  position: absolute;
+  top: -50%;
+  bottom: -50%;
+  width: 1.25em;
+  transform: translate3d(-525%, 0, 0) rotate(35deg);
+}
 
-  border: 3px solid transparent;
-  transition: all 0.2s;
+.buy-btn:hover::after {
+  transition: transform 0.45s ease-in-out;
+  transform: translate3d(200%, 0, 0) rotate(35deg);
 }
 .buy-btn:focus {
   outline: none;
@@ -83,8 +103,16 @@ padding: 5% 5%;
 }
 
 #price{
-  font-size: 18px;
+  font-size: 21px;
   font-weight: 500;
+
+}
+#price>img {
+  height: 25px;
+  width: 25px;
+  margin-top: -4px;
+ 
+ 
 }
 
 #bottom {
