@@ -7,6 +7,8 @@
 
 
 <div class="container">
+  <h1>Выдача коинов</h1>
+  <p>Студент:</p>
   <div class="dropdown">
     <select name="one" class="dropdown-select">
       <option value="">Выбрать</option>
@@ -14,6 +16,9 @@
       <option value="2">2</option>
       <option value="3">3</option>
     </select>
+  </div>
+  <div class="groop">
+    <p>Номер группы:</p>
   </div>
   <div class="dropdown dropdown-dark">
     <select name="two" class="dropdown-select">
@@ -24,6 +29,8 @@
     </select>
   </div>
 </div>
+
+
 </section>
 </template>
 
@@ -69,19 +76,23 @@ body {
   margin: 80px auto;
   width: 553px;
   text-align: center;
+  align-items: center;
+  
 }
 
 .container > .dropdown {
   margin: 0 20px;
   vertical-align: top;
+  margin: 41px;
+  margin-left: 41px;
 }
 
 .dropdown {
-  display: inline-block;
+  display: flex;
   position: relative;
   overflow: hidden;
   height: 28px;
-  width: 525px;
+  width: 443px;
   background: #f2f2f2;
   border: 1px solid;
   border-color: white #f7f7f7 whitesmoke;
@@ -92,6 +103,7 @@ body {
   background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.06));
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+  
 }
 
 .dropdown:before, .dropdown:after {
@@ -148,7 +160,7 @@ body {
   margin: 3px;
   padding: 6px 8px;
   text-shadow: none;
-  background: #f2f2f2;
+  background: #62717a;
   border-radius: 3px;
   cursor: pointer;
 }
@@ -176,7 +188,7 @@ body {
 }
 
 .dropdown-dark {
-  background: #444;
+  background: #ffffff;
   border-color: #111111 #0a0a0a black;
   background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
   background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
@@ -195,9 +207,13 @@ body {
 }
 
 .dropdown-dark .dropdown-select {
-  color: #aaa;
+  color: #84888b;
   text-shadow: 0 1px black;
   background: #444;  /* Fallback for IE 8 */
+   color: #62717a;
+  text-shadow: 0 1px white;
+  background: #f2f2f2; /* Fallback for IE 8 */
+  background: rgba(0, 0, 0, 0) !important; /* "transparent" doesn't work with Opera */
 }
 
 .dropdown-dark .dropdown-select:focus {
@@ -209,5 +225,18 @@ body {
   text-shadow: 0 1px rgba(0, 0, 0, 0.4);
 }
 
+.container>h1 {
+  text-align: center;
+  margin: 37px
+}
 
+.container>p {
+  margin-right: 372px;
+  margin-bottom: -35px;
+}
+
+.groop>p {
+  margin-right: 325px;
+  margin-bottom: -35px;
+}
 </style>
