@@ -28,6 +28,12 @@
       <option value="3">3</option>
     </select>
   </div>
+  <div class="find-container">
+          <input type="text" placeholder="Кол-во" />
+  </div>
+  <div class="ok-btn">
+
+  </div>
 </div>
 
 
@@ -239,4 +245,43 @@ body {
   margin-right: 325px;
   margin-bottom: -35px;
 }
+
+.find-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 5%;
+  background-color: rgba(255, 255, 255, 0.379);
+  padding: 10px 15px;
+  border-radius: 15px;
+  width: 121px;
+  margin-left: 190px;
+  margin-top: -15px;
+
+}
+
+.find-container input{
+  display: block;
+  width: 100%;
+  padding: 8px 16px;
+  line-height: 25px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+
+  
+}
+.find-container input::placeholder {
+  color: white;
+}
+.find-container input:focus {
+  border: none;
+  outline: none;
+}
+
 </style>
