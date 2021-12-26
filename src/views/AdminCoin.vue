@@ -32,7 +32,7 @@
           <input type="text" placeholder="Кол-во" />
   </div>
   <div class="ok-btn">
-
+  <button id="buy-btn" class="main-btn orange-color">Купить</button>
   </div>
 </div>
 
