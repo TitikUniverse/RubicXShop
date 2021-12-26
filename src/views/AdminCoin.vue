@@ -31,8 +31,9 @@
   <div class="find-container">
           <input type="text" placeholder="Кол-во" />
   </div>
-  <div class="ok-btn">
-  <button id="buy-btn" class="main-btn orange-color">Купить</button>
+ 
+  <div class="buy-btn">
+    <button id="buy-btn" class="main-btn orange-color">Добавить</button>
   </div>
 </div>
 
@@ -254,9 +255,9 @@ body {
   height: 5%;
   background-color: rgba(255, 255, 255, 0.379);
   padding: 10px 15px;
-  border-radius: 15px;
-  width: 121px;
-  margin-left: 190px;
+  border-radius: 6px;
+  width: 110px;
+  margin-left: 205px;
   margin-top: -15px;
 
 }
@@ -266,7 +267,7 @@ body {
   width: 100%;
   padding: 8px 16px;
   line-height: 25px;
-  font-size: 18px;
+  font-size: 15px;
   border: none;
   outline: none;
   background-color: transparent;
@@ -283,5 +284,42 @@ body {
   border: none;
   outline: none;
 }
+.buy-btn>button  {
+  z-index: 1;
+  position: relative;
+  font-size: inherit;
+  font-family: inherit;
+  color: white;
+  padding: 0.5em 1em;
+  outline: none;
+  border: none;
+  background-color: hsl(236, 32%, 26%);
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top: 18px;
+  align-items: center;
+}
+.buy-btn::after {
+  content: '';
+  z-index: -1;
+  background-color: hsla(0, 0%, 100%, 0.2);
+  position: absolute;
+  top: -50%;
+  bottom: -50%;
+  width: 1.25em;
+  transform: translate3d(-525%, 0, 0) rotate(35deg);
+}
 
+.buy-btn:hover::after {
+  transition: transform 0.45s ease-in-out;
+  transform: translate3d(200%, 0, 0) rotate(35deg);
+}
+.buy-btn:focus {
+  outline: none;
+}
+// .buy-btn:hover {
+//   border: 3px solid #694dc6;
+//   background-color: #694dc61f;
+// }
 </style>
