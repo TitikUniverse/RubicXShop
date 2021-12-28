@@ -49,8 +49,8 @@
           <img id="image" src="https://cdn1.ozone.ru/s3/multimedia-h/6044086553.jpg" alt="">
           <div class="selected-product-item">
             <div id="price" class="orange-color">
-              <span>100</span>
-              <img id="image" src="https://pngimage.net/wp-content/uploads/2018/06/r-logo-png-4.png" alt="">
+              <span>100 R</span>
+              <!-- <img id="image" src="https://pngimage.net/wp-content/uploads/2018/06/r-logo-png-4.png" alt=""> -->
             </div>
             <span id="name">Коврик для мышки</span>
             <span id="description">Самый лучший коврик для мышки. Очень мягкий и шелковистый</span>

@@ -3,8 +3,10 @@
     <img :src=productData.imageUrl alt="img">
     <span id="name">{{productData.name}}</span>
     <div id="bottom">
-      <span id="price">{{productData.price}} 
-      <img id="image" src="https://pngimage.net/wp-content/uploads/2018/06/r-logo-png-4.png" alt="">
+      <span id="price">
+        {{productData.price}}
+        R
+      <!-- <img id="image" src="@/assets/RIcon.png" alt="R"> -->
       </span>
       <button class="buy-btn purple-color">Подробнее</button>
     </div>

@@ -118,13 +118,15 @@ html{
 .content{
   display: flex;
   flex-direction: column;
-  padding: 0px 33%;
   margin-top: 50px;
+  left: 6%;
+  position: relative;
+  width: 94%;
 }
 table{
   font-family: sans-serif;
   border-collapse: separate;
-  border-spacing: 5px;
+  border-spacing: 15px;
   color: rgb(255, 255, 255);
   border-radius: 20px;
   
@@ -141,6 +143,15 @@ td{
   padding: 10px;
   font-weight: bold;
   font-size: 20px;
+  border-radius: 25px;
+}
+td:last-child{
+  background: rgb(255, 123, 0);
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 25px;
 }
 
 </style>
