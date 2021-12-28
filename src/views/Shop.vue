@@ -91,7 +91,7 @@ export default {
 <style lang="scss" scoped>
 #shop {
   color: white;
-  background: url("../assets/bg.webp");
+  background: linear-gradient(rgb(1, 165, 138), rgb(13, 84, 165));
 
   display: flex;
   flex-direction: row;
@@ -212,10 +212,10 @@ export default {
 }
 
 .purple-color  {
-  background-color: #694dc6;
+  background-color: #fa8100;
 }
 .orange-color {
-  background-color: #694dc6;
+  background-color: #fa8100;
 }
 
 .right-side {
