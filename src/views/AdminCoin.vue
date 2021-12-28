@@ -28,13 +28,16 @@
       <option value="3">3</option>
     </select>
   </div>
-  <div class="find-container">
-          <input type="text" placeholder="Кол-во" />
+ 
+ <div class="find-container">
+        <input type="text" placeholder="Кол-во" />
   </div>
  
   <div class="buy-btn">
     <button id="buy-btn" class="main-btn orange-color">Добавить</button>
   </div>
+
+  
 </div>
 
 
@@ -299,22 +302,9 @@ body {
   border-radius: 10px;
   margin-top: 18px;
   align-items: center;
-}
-.buy-btn::after {
-  content: '';
-  z-index: -1;
-  background-color: hsla(0, 0%, 100%, 0.2);
-  position: absolute;
-  top: -50%;
-  bottom: -50%;
-  width: 1.25em;
-  transform: translate3d(-525%, 0, 0) rotate(35deg);
+  margin-right: -248px;
 }
 
-.buy-btn:hover::after {
-  transition: transform 0.45s ease-in-out;
-  transform: translate3d(200%, 0, 0) rotate(35deg);
-}
 .buy-btn:focus {
   outline: none;
 }
