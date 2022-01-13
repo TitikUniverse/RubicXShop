@@ -49,8 +49,8 @@
           <img id="image" src="https://cdn1.ozone.ru/s3/multimedia-h/6044086553.jpg" alt="">
           <div class="selected-product-item">
             <div id="price" class="orange-color">
-              <span>100</span>
-              <img id="image" src="https://pngimage.net/wp-content/uploads/2018/06/r-logo-png-4.png" alt="">
+              <span>100 R</span>
+              <!-- <img id="image" src="https://pngimage.net/wp-content/uploads/2018/06/r-logo-png-4.png" alt=""> -->
             </div>
             <span id="name">Коврик для мышки</span>
             <span id="description">Самый лучший коврик для мышки. Очень мягкий и шелковистый</span>
@@ -91,7 +91,7 @@ export default {
 <style lang="scss" scoped>
 #shop {
   color: white;
-  background: url("../assets/bg.webp");
+  background: linear-gradient(rgb(1, 165, 138), rgb(13, 84, 165));
 
   display: flex;
   flex-direction: row;
@@ -212,10 +212,10 @@ export default {
 }
 
 .purple-color  {
-  background-color: #694dc6;
+  background-color: #fa8100;
 }
 .orange-color {
-  background-color: #694dc6;
+  background-color: #fa8100;
 }
 
 .right-side {

@@ -57,7 +57,7 @@ components: {
 <style lang="scss" scoped>
 #admincoin {
   color: white;
-  background: url("../assets/bg.webp");
+ background: linear-gradient(rgb(1, 165, 138), rgb(13, 84, 165));
   display: flex;
   flex-direction: row;
   min-height: 100vh;

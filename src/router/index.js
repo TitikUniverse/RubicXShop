@@ -5,6 +5,10 @@ Vue.use(VueRouter)
 
 const routes = [
   {
+    path: '/',
+    redirect: "/auth"
+  },
+  {
     path: '/auth',
     component: () => import('@/views/Login.vue')
   },
@@ -44,7 +48,9 @@ const routes = [
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
+  routes,
+  
 })
+
 
 export default router
