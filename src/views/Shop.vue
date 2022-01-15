@@ -212,7 +212,7 @@ export default {
 }
 
 .purple-color  {
-  background-color: #fa8100;
+  background-color: #fa810000;
 }
 .orange-color {
   background-color: #fa8100;

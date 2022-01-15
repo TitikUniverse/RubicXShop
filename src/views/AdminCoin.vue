@@ -31,6 +31,7 @@
  
  <div class="find-container">
         <input type="text" placeholder="Кол-во" />
+        
   </div>
  
   <div class="buy-btn">
@@ -302,7 +303,7 @@ body {
   border-radius: 10px;
   margin-top: 18px;
   align-items: center;
-  margin-right: -248px;
+  margin-right: 0px;
 }
 
 .buy-btn:focus {
