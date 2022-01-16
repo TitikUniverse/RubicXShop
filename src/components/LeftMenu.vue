@@ -57,5 +57,6 @@ export default {
   margin-left: -84px;
   margin-top:-685px;
   align-items: center;
+  
 }
 </style>

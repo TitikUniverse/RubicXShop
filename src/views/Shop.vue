@@ -196,6 +196,7 @@ export default {
 .find-container #find-btn {
   width: 45px;
   height: 42px;
+  margin-top: 2px;
 }
 .main-btn  {
   border: none;

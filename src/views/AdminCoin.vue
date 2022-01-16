@@ -199,14 +199,21 @@ body {
 }
 
 .dropdown-dark {
-  background: #ffffff;
-  border-color: #111111 #0a0a0a black;
-  background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
-  background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
-  background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
-  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.4));
-  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2);
+   display: flex;
+  position: relative;
+  overflow: hidden;
+  height: 28px;
+  width: 443px;
+  background: #f2f2f2;
+  border: 1px solid;
+  border-color: white #f7f7f7 whitesmoke;
+  border-radius: 3px;
+  background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+  background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+  background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.06));
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
 }
 
 .dropdown-dark:before {
@@ -261,7 +268,7 @@ body {
   padding: 10px 15px;
   border-radius: 6px;
   width: 110px;
-  margin-left: 205px;
+  margin-left: 199px;
   margin-top: -15px;
 
 }
@@ -297,13 +304,13 @@ body {
   padding: 0.5em 1em;
   outline: none;
   border: none;
-  background-color: hsl(236, 32%, 26%);
+  background-color: #fa8100;
   overflow: hidden;
   cursor: pointer;
   border-radius: 10px;
-  margin-top: 18px;
+  margin-top: 9px;
   align-items: center;
-  margin-right: 0px;
+  margin-right: 13px;
 }
 
 .buy-btn:focus {
