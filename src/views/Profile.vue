@@ -138,7 +138,7 @@ th{
 
 }
 td{
-  background: rgb(139, 0, 255);
+  background: rgb(101 191 165);
   text-align: center;
   padding: 10px;
   font-weight: bold;
@@ -146,7 +146,7 @@ td{
   border-radius: 25px;
 }
 td:last-child{
-  background: rgb(255, 123, 0);
+  background: rgb(87 116 182);
   text-align: center;
   padding: 10px;
   font-weight: bold;

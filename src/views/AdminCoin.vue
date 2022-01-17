@@ -62,8 +62,13 @@ components: {
   display: flex;
   flex-direction: row;
   min-height: 100vh;
+    @media only screen and (max-device-width: 480px) {
+    width: 80%;
+  }
   
 }
+
+
 
 .menu {
   width: 6%;
@@ -71,9 +76,7 @@ components: {
   position: fixed;
   border-right: 2px solid rgba(255, 255, 255, 0.513);
 
-  @media only screen and (max-device-width: 480px) {
-    display: none;
-  }
+ 
 }
 
 
@@ -81,6 +84,8 @@ body {
   font: 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
   color: #404040;
   background: #93cedf;
+
+  
 }
 
 .container {
@@ -89,6 +94,8 @@ body {
   text-align: center;
   align-items: center;
   
+   
+ 
 }
 
 .container > .dropdown {
@@ -114,7 +121,11 @@ body {
   background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.06));
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
-  
+
+    @media only screen and (max-device-width: 480px) {
+    width: 49%;
+    
+  }
 }
 
 .dropdown:before, .dropdown:after {
@@ -214,6 +225,10 @@ body {
   background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.06));
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+
+   @media only screen and (max-device-width: 480px) {
+    width: 49%;
+  }
 }
 
 .dropdown-dark:before {
@@ -225,7 +240,7 @@ body {
 }
 
 .dropdown-dark .dropdown-select {
-  color: #84888b;
+  color: #ffffff;
   text-shadow: 0 1px black;
   background: #444;  /* Fallback for IE 8 */
    color: #62717a;
@@ -246,6 +261,7 @@ body {
 .container>h1 {
   text-align: center;
   margin: 37px
+
 }
 
 .container>p {
@@ -270,6 +286,10 @@ body {
   width: 110px;
   margin-left: 199px;
   margin-top: -15px;
+
+   @media only screen and (max-device-width: 480px) {
+    margin-left: 85px;
+  }
 
 }
 
@@ -304,7 +324,7 @@ body {
   padding: 0.5em 1em;
   outline: none;
   border: none;
-  background-color: #fa8100;
+  background-color: #00a48a;
   overflow: hidden;
   cursor: pointer;
   border-radius: 10px;
