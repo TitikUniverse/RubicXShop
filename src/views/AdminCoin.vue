@@ -8,7 +8,7 @@
 
 <div class="container">
   <h1>Выдача коинов</h1>
-  <p>Студент:</p>
+  <p>Номер группы:</p>
   <div class="dropdown">
     <select name="one" class="dropdown-select">
       <option value="">Выбрать</option>
@@ -18,7 +18,7 @@
     </select>
   </div>
   <div class="groop">
-    <p>Номер группы:</p>
+    <p>Студент:</p>
   </div>
   <div class="dropdown dropdown-dark">
     <select name="two" class="dropdown-select">
@@ -28,15 +28,29 @@
       <option value="3">3</option>
     </select>
   </div>
+
+  <div class="addcoinborder">
+    <div class="addcoincell">
+      <div class="coinname">
+        <span>HelpCoin</span>
+        
+      </div>
+      <div class="coincount">
+        <option value="">Кол-во</option>
+        <button>-</button>
+        <button>+</button>
+      </div>
+    </div>
+  </div>
  
- <div class="find-container">
+ <!-- <div class="find-container">
         <input type="text" placeholder="Кол-во" />
         
   </div>
  
   <div class="buy-btn">
     <button id="buy-btn" class="main-btn orange-color">Добавить</button>
-  </div>
+  </div> -->
 
   
 </div>
@@ -79,6 +93,29 @@ components: {
  
 }
 
+.addcoinborder{
+  height: 70%;
+  border: solid 1px;
+}
+
+.addcoincell{
+  width: 100%;
+  height: 12%;
+  border: solid 1px;
+
+  display: flex;
+  flex-direction: row;  
+}
+
+.coinname{
+  width: 60%;
+  border: solid 1px;
+}
+
+.coincount{
+  width: 40%;
+  border: solid 1px;
+}
 
 body {
   font: 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
@@ -265,12 +302,12 @@ body {
 }
 
 .container>p {
-  margin-right: 372px;
+  margin-right: 330px;
   margin-bottom: -35px;
 }
 
 .groop>p {
-  margin-right: 325px;
+  margin-right: 375px;
   margin-bottom: -35px;
 }
 
@@ -335,6 +372,8 @@ body {
 
 .buy-btn:focus {
   outline: none;
+  border-style: none;
+  
 }
 // .buy-btn:hover {
 //   border: 3px solid #694dc6;
