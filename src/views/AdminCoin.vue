@@ -32,8 +32,7 @@
   <div class="addcoinborder">
     <div class="addcoincell">
       <div class="coinname">
-        <span>HelpCoin</span>
-        
+        <span>TimeCoin</span>
       </div>
       <div class="coincount">
         <option value="">Кол-во</option>
@@ -41,6 +40,76 @@
         <button>+</button>
       </div>
     </div>
+
+    <div class="addcoincell">
+      <div class="coinname">
+        <span>HelpCoin</span>
+      </div>
+      <div class="coincount">
+        <option value="">Кол-во</option>
+        <button>-</button>
+        <button>+</button>
+      </div>
+    </div>
+
+    <div class="addcoincell">
+      <div class="coinname">
+        <span>FlashCoin</span>
+      </div>
+      <div class="coincount">
+        <option value="">Кол-во</option>
+        <button>-</button>
+        <button>+</button>
+      </div>
+    </div>
+
+    <div class="addcoincell">
+      <div class="coinname">
+        <span>BonusCoin</span>
+      </div>
+      <div class="coincount">
+        <option value="">Кол-во</option>
+        <button>-</button>
+        <button>+</button>
+      </div>
+    </div>
+
+    <div class="addcoincell">
+      <div class="coinname">
+        <span>LikeCoin</span>
+      </div>
+      <div class="coincount">
+        <option value="">Кол-во</option>
+        <button>-</button>
+        <button>+</button>
+      </div>
+    </div>
+
+    <div class="addcoincell">
+      <div class="coinname">
+        <span>FestCoin</span>
+      </div>
+      <div class="coincount">
+        <option value="">Кол-во</option>
+        <button>-</button>
+        <button>+</button>
+      </div>
+    </div>
+
+    <div class="addcoincell">
+      <div class="coinnamerubi">
+        <span>RubiCoin</span>
+      </div>
+      <div class="coincount">
+        <option value="">Кол-во</option>
+        <button>-</button>
+        <button>+</button>
+      </div>
+    </div>
+    
+    </div>
+    
+    
   </div>
  
  <!-- <div class="find-container">
@@ -95,13 +164,11 @@ components: {
 
 .addcoinborder{
   height: 70%;
-  border: solid 1px;
 }
 
 .addcoincell{
   width: 100%;
   height: 12%;
-  border: solid 1px;
 
   display: flex;
   flex-direction: row;  
@@ -109,13 +176,49 @@ components: {
 
 .coinname{
   width: 60%;
-  border: solid 1px;
+  font-size: 25px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .coincount{
   width: 40%;
-  border: solid 1px;
+  font-size: 20px;
 }
+
+.coincount > button{
+  z-index: 1;
+  position: relative;
+  font-size: inherit;
+  font-family: inherit;
+  color: white;
+  padding: 5px;
+  outline: none;
+  border: none;
+  background-color: hsl(255, 99, 71);
+  overflow: hidden;
+  border-radius: 10px;
+  margin-top: -2px;
+}
+
+
+
+.coinnamerubi{
+  width: 60%;
+  font-size: 25px;
+  background: linear-gradient(Tomato, OrangeRed);
+  border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
+
 
 body {
   font: 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
