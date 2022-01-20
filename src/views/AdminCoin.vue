@@ -167,13 +167,13 @@ components: {
 <style lang="scss" scoped>
 #admincoin {
   color: white;
- background: linear-gradient(rgb(1, 165, 138), rgb(13, 84, 165));
-
+  background: linear-gradient(rgb(1, 165, 138), rgb(13, 84, 165));
+  overflow: hidden;
   display: flex;
   flex-direction: row;
   min-height: 100vh;
-    @media only screen and (max-device-width: 480px) {
-    width: 80%;
+  @media only screen and (max-device-width: 480px) {
+  width: 80%;
   }
   
 }
@@ -198,8 +198,7 @@ components: {
   width: 60%;
   font-size: 25px;
   background: linear-gradient(Tomato, OrangeRed);
-  border-radius: 15px;
-
+  border-radius: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -214,26 +213,23 @@ components: {
   padding: 5px;
   outline: none;
   border: none;
-  background-color: #ff5321;
+  background-color: #b14d2f;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 50px;
   margin-top: -290px;
   margin-right: -210px;
 }
 
 .addcoincell{
   width: 100%;
-  
   display: flex;
   flex-direction: row;
-
   margin-bottom: 15px;  
 }
 
 .coinname{
   width: 60%;
   font-size: 25px;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -251,13 +247,13 @@ components: {
 .coincount input {
   width: 30px;
   height: 35px;
-   
 }
 
 .coins{
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 35px;
   background: white;
+  opacity: 65%;
 }
 
 .coincount button{
@@ -270,33 +266,27 @@ components: {
   // padding: 5px 10px;
   outline: none;
   border: none;
-  background-color: #ff5526;
+  background: rgb(177, 67, 4);
   overflow: hidden;
-  border-radius: 10px;
+  
 }
 
 
 .coinnamerubi{
   width: 60%;
   font-size: 25px;
-  background: linear-gradient(Tomato, OrangeRed);
-  border-radius: 15px;
-
+  background: #db843a;
+  border-radius: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 
-
-
-
 body {
   font: 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
   color: #404040;
   background: #93cedf;
-
-  
 }
 
 .container {
@@ -304,9 +294,6 @@ body {
   width: 553px;
   text-align: center;
   align-items: center;
-  
-   
- 
 }
 
 .container > .dropdown {
@@ -332,10 +319,8 @@ body {
   background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.06));
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
-
-    @media only screen and (max-device-width: 480px) {
-    width: 49%;
-    
+  @media only screen and (max-device-width: 480px) {
+  width: 49%;
   }
 }
 
@@ -436,9 +421,8 @@ body {
   background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.06));
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
-
-   @media only screen and (max-device-width: 480px) {
-    width: 49%;
+  @media only screen and (max-device-width: 480px) {
+  width: 49%;
   }
 }
 
@@ -471,8 +455,7 @@ body {
 
 .container>h1 {
   text-align: center;
-  margin: 37px
-
+  margin: 37px;
 }
 
 .container>p {
@@ -497,9 +480,8 @@ body {
   width: 110px;
   margin-left: 199px;
   margin-top: -15px;
-
-   @media only screen and (max-device-width: 480px) {
-    margin-left: 85px;
+  @media only screen and (max-device-width: 480px) {
+  margin-left: 85px;
   }
 
 }
@@ -516,8 +498,6 @@ body {
   color: white;
   font-weight: 500;
   text-align: center;
-
-  
 }
 .find-container input::placeholder {
   color: white;
