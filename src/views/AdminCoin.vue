@@ -30,13 +30,14 @@
   </div>
 
   <div class="addcoinborder">
+
     <div class="addcoincell">
       <div class="coinname">
         <span>TimeCoin</span>
       </div>
       <div class="coincount">
-        <option value="">Кол-во</option>
         <button>-</button>
+          <div class="coins" id="time" value="0"></div> 
         <button>+</button>
       </div>
     </div>
@@ -46,8 +47,8 @@
         <span>HelpCoin</span>
       </div>
       <div class="coincount">
-        <option value="">Кол-во</option>
         <button>-</button>
+            <div id="help" class="coins" value="0"></div>
         <button>+</button>
       </div>
     </div>
@@ -57,8 +58,8 @@
         <span>FlashCoin</span>
       </div>
       <div class="coincount">
-        <option value="">Кол-во</option>
         <button>-</button>
+          <div class="coins" id="flash" value="0"></div>
         <button>+</button>
       </div>
     </div>
@@ -68,8 +69,8 @@
         <span>BonusCoin</span>
       </div>
       <div class="coincount">
-        <option value="">Кол-во</option>
         <button>-</button>
+          <div class="coins" id="bonus" value="0"></div>
         <button>+</button>
       </div>
     </div>
@@ -79,8 +80,8 @@
         <span>LikeCoin</span>
       </div>
       <div class="coincount">
-        <option value="">Кол-во</option>
         <button>-</button>
+          <div class="coins" id="like" value="0"></div>
         <button>+</button>
       </div>
     </div>
@@ -90,8 +91,8 @@
         <span>FestCoin</span>
       </div>
       <div class="coincount">
-        <option value="">Кол-во</option>
         <button>-</button>
+          <div class="coins" id="fest" value="" ></div>
         <button>+</button>
       </div>
     </div>
@@ -101,8 +102,8 @@
         <span>RubiCoin</span>
       </div>
       <div class="coincount">
-        <option value="">Кол-во</option>
         <button>-</button>
+        <div class="coins" id="rubi"  ></div>
         <button>+</button>
       </div>
     </div>
@@ -135,6 +136,26 @@
 
 <script>
 import LeftMenu from "../components/LeftMenu.vue";
+
+function a() {
+
+var Ctime = 0;
+var Chelp = 0;
+var Cflash = 0;
+var Cbonus = 0;
+var Clike = 0;
+var Cfest = 0;
+var Crubi = 0;
+
+document.getElementById("time").innerHTML=Ctime;
+document.getElementById("help").innerHTML=Chelp;
+document.getElementById("flash").innerHTML=Cflash;
+document.getElementById("bonus").innerHTML=Cbonus;
+document.getElementById("like").innerHTML=Clike;
+document.getElementById("fest").innerHTML=Cfest;
+document.getElementById("rubi").innerHTML=Crubi;
+}
+
 
 export default {
 components: {
@@ -187,7 +208,6 @@ components: {
 
 .add > button{
   z-index: 1;
-  position: relative;
   font-size: inherit;
   font-family: inherit;
   color: white;
@@ -197,16 +217,17 @@ components: {
   background-color: #ff5321;
   overflow: hidden;
   border-radius: 10px;
-  margin-top: -72px;
-  margin-right: -209px;
+  margin-top: -290px;
+  margin-right: -210px;
 }
 
 .addcoincell{
   width: 100%;
-  height: 12%;
-
+  
   display: flex;
-  flex-direction: row;  
+  flex-direction: row;
+
+  margin-bottom: 15px;  
 }
 
 .coinname{
@@ -221,23 +242,38 @@ components: {
 .coincount{
   width: 40%;
   font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
-.coincount > button{
+.coincount input {
+  width: 30px;
+  height: 35px;
+   
+}
+
+.coins{
+  width: 30px;
+  height: 30px;
+  background: white;
+}
+
+.coincount button{
+  width: 45px;
+  height: 35px;
   z-index: 1;
-  position: relative;
   font-size: inherit;
   font-family: inherit;
   color: white;
-  padding: 5px;
+  // padding: 5px 10px;
   outline: none;
   border: none;
-  background-color: rgb(255, 99, 71);
+  background-color: #ff5526;
   overflow: hidden;
   border-radius: 10px;
-  margin-top: -2px;
 }
-
 
 
 .coinnamerubi{
