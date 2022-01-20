@@ -107,10 +107,15 @@
       </div>
     </div>
     
-    </div>
     
     
   </div>
+
+
+    <!-- Сохранение коинов -->
+    <div class="add">
+      <button>Сохранить</button>
+    </div>
  
  <!-- <div class="find-container">
         <input type="text" placeholder="Кол-во" />
@@ -142,6 +147,7 @@ components: {
 #admincoin {
   color: white;
  background: linear-gradient(rgb(1, 165, 138), rgb(13, 84, 165));
+
   display: flex;
   flex-direction: row;
   min-height: 100vh;
@@ -164,6 +170,35 @@ components: {
 
 .addcoinborder{
   height: 70%;
+}
+
+
+.add{
+  width: 60%;
+  font-size: 25px;
+  background: linear-gradient(Tomato, OrangeRed);
+  border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.add > button{
+  z-index: 1;
+  position: relative;
+  font-size: inherit;
+  font-family: inherit;
+  color: white;
+  padding: 5px;
+  outline: none;
+  border: none;
+  background-color: #ff5321;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-top: -72px;
+  margin-right: -209px;
 }
 
 .addcoincell{
@@ -197,7 +232,7 @@ components: {
   padding: 5px;
   outline: none;
   border: none;
-  background-color: hsl(255, 99, 71);
+  background-color: rgb(255, 99, 71);
   overflow: hidden;
   border-radius: 10px;
   margin-top: -2px;
