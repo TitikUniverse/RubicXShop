@@ -36,9 +36,9 @@
         <span>TimeCoin</span>
       </div>
       <div class="coincount">
-        <button>-</button>
+        <button class="minusbutton">-</button>
           <div class="coins" id="time" value="0"></div> 
-        <button>+</button>
+        <button class="plusbutton">+</button>
       </div>
     </div>
 
@@ -47,9 +47,9 @@
         <span>HelpCoin</span>
       </div>
       <div class="coincount">
-        <button>-</button>
+        <button class="minusbutton">-</button>
             <div id="help" class="coins" value="0"></div>
-        <button>+</button>
+        <button class="plusbutton">+</button>
       </div>
     </div>
 
@@ -58,9 +58,9 @@
         <span>FlashCoin</span>
       </div>
       <div class="coincount">
-        <button>-</button>
+        <button class="minusbutton">-</button>
           <div class="coins" id="flash" value="0"></div>
-        <button>+</button>
+        <button class="plusbutton">+</button>
       </div>
     </div>
 
@@ -69,9 +69,9 @@
         <span>BonusCoin</span>
       </div>
       <div class="coincount">
-        <button>-</button>
+        <button class="minusbutton">-</button>
           <div class="coins" id="bonus" value="0"></div>
-        <button>+</button>
+       <button class="plusbutton">+</button>
       </div>
     </div>
 
@@ -80,9 +80,9 @@
         <span>LikeCoin</span>
       </div>
       <div class="coincount">
-        <button>-</button>
+        <button class="minusbutton">-</button>
           <div class="coins" id="like" value="0"></div>
-        <button>+</button>
+        <button class="plusbutton">+</button>
       </div>
     </div>
 
@@ -91,9 +91,9 @@
         <span>FestCoin</span>
       </div>
       <div class="coincount">
-        <button>-</button>
+        <button class="minusbutton">-</button>
           <div class="coins" id="fest" value="" ></div>
-        <button>+</button>
+        <button class="plusbutton">+</button>
       </div>
     </div>
 
@@ -102,9 +102,9 @@
         <span>RubiCoin</span>
       </div>
       <div class="coincount">
-        <button>-</button>
+        <button class="minusbutton">-</button>
         <div class="coins" id="rubi"  ></div>
-        <button>+</button>
+        <button class="plusbutton">+</button>
       </div>
     </div>
     
@@ -256,7 +256,7 @@ components: {
   opacity: 65%;
 }
 
-.coincount button{
+.coincount .minusbutton{
   width: 45px;
   height: 35px;
   z-index: 1;
@@ -268,6 +268,22 @@ components: {
   border: none;
   background: rgb(177, 67, 4);
   overflow: hidden;
+  border-radius: 50px 0px 0px 50px;
+  
+}
+.coincount .plusbutton{
+  width: 45px;
+  height: 35px;
+  z-index: 1;
+  font-size: inherit;
+  font-family: inherit;
+  color: white;
+  // padding: 5px 10px;
+  outline: none;
+  border: none;
+  background: rgb(177, 67, 4);
+  overflow: hidden;
+  border-radius: 0px 50px 50px 0px;
   
 }
 
