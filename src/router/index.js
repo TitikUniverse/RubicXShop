@@ -39,7 +39,11 @@ const routes = [
   {
     path: '/admincoin',
     component: () => import('@/views/AdminCoin.vue')
-  }
+  },
+  {
+    path: '/applications',
+    component: () => import('@/views/Applications.vue')
+  },
   
   
 ]

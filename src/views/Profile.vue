@@ -41,6 +41,7 @@
       </div>
       <div class="admin-button second-row" v-else>
         <router-link tag="button" to="/admincoin" class="main-btn">Открыть админ панель</router-link>
+        <router-link tag="button" to="/applications" class="main-btn">Открыть список заявок</router-link>
       </div>
     </div>
   </section>
@@ -56,7 +57,7 @@ export default {
         name: "Семён",
         age: 21,
         groupnumber: "PS  212019",
-        role: "user",
+        role: "admin",
       },
     };
   },
@@ -176,8 +177,10 @@ td:last-child {
   cursor: pointer;
   border-radius: 10px;
   margin-top: 9px;
-  align-items: center;
-  margin-right: 13px;
+  margin-right: 15px;
+  
+  
+  
 }
 .main-btn:focus{
   outline: none;
