@@ -5,8 +5,13 @@
         <button class="main-btn" href=""><span class="material-icons-outlined md-42 md-light">email</span></button>
         <button class="main-btn" href=""><span class="material-icons-outlined md-42 md-light">import_contacts</span></button>
         <button class="main-btn" href=""><router-link to="/shop"><span class="material-icons-outlined md-42 md-light">local_mall</span></router-link></button>
-    </div>
+      <div class="r-icon">
+       <img src="https://media.discordapp.net/attachments/528856767199969280/931705208537489418/-2.png?width=566&height=566" alt="">
+      </div>
   </div>
+    
+  </div>
+  
 </template>
 
 <script>
@@ -42,5 +47,13 @@ export default {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+}
+
+
+
+.r-icon>img {
+  width: 90px;
+  height: 90px;
+  margin-top: -1000px;
 }
 </style>

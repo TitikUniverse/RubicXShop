@@ -8,7 +8,7 @@
 
 <div class="container">
   <h1>Выдача коинов</h1>
-  <p>Студент:</p>
+  <p>Номер группы:</p>
   <div class="dropdown">
     <select name="one" class="dropdown-select">
       <option value="">Выбрать</option>
@@ -18,7 +18,7 @@
     </select>
   </div>
   <div class="groop">
-    <p>Номер группы:</p>
+    <p>Студент:</p>
   </div>
   <div class="dropdown dropdown-dark">
     <select name="two" class="dropdown-select">
@@ -28,13 +28,106 @@
       <option value="3">3</option>
     </select>
   </div>
-  <div class="find-container">
-          <input type="text" placeholder="Кол-во" />
+
+  <div class="addcoinborder">
+
+    <div class="addcoincell">
+      <div class="coinname">
+        <span>TimeCoin</span>
+      </div>
+      <div class="coincount">
+        <button class="minusbutton">-</button>
+          <div class="coins" id="time" value="0"></div> 
+        <button class="plusbutton">+</button>
+      </div>
+    </div>
+
+    <div class="addcoincell">
+      <div class="coinname">
+        <span>HelpCoin</span>
+      </div>
+      <div class="coincount">
+        <button class="minusbutton">-</button>
+            <div id="help" class="coins" value="0"></div>
+        <button class="plusbutton">+</button>
+      </div>
+    </div>
+
+    <div class="addcoincell">
+      <div class="coinname">
+        <span>FlashCoin</span>
+      </div>
+      <div class="coincount">
+        <button class="minusbutton">-</button>
+          <div class="coins" id="flash" value="0"></div>
+        <button class="plusbutton">+</button>
+      </div>
+    </div>
+
+    <div class="addcoincell">
+      <div class="coinname">
+        <span>BonusCoin</span>
+      </div>
+      <div class="coincount">
+        <button class="minusbutton">-</button>
+          <div class="coins" id="bonus" value="0"></div>
+       <button class="plusbutton">+</button>
+      </div>
+    </div>
+
+    <div class="addcoincell">
+      <div class="coinname">
+        <span>LikeCoin</span>
+      </div>
+      <div class="coincount">
+        <button class="minusbutton">-</button>
+          <div class="coins" id="like" value="0"></div>
+        <button class="plusbutton">+</button>
+      </div>
+    </div>
+
+    <div class="addcoincell">
+      <div class="coinname">
+        <span>FestCoin</span>
+      </div>
+      <div class="coincount">
+        <button class="minusbutton">-</button>
+          <div class="coins" id="fest" value="" ></div>
+        <button class="plusbutton">+</button>
+      </div>
+    </div>
+
+    <div class="addcoincell">
+      <div class="coinnamerubi">
+        <span>RubiCoin</span>
+      </div>
+      <div class="coincount">
+        <button class="minusbutton">-</button>
+        <div class="coins" id="rubi"  ></div>
+        <button class="plusbutton">+</button>
+      </div>
+    </div>
+    
+    
+    
+  </div>
+
+
+    <!-- Сохранение коинов -->
+    <div class="add">
+      <button>Сохранить</button>
+    </div>
+ 
+ <!-- <div class="find-container">
+        <input type="text" placeholder="Кол-во" />
+        
   </div>
  
   <div class="buy-btn">
     <button id="buy-btn" class="main-btn orange-color">Добавить</button>
-  </div>
+  </div> -->
+
+  
 </div>
 
 
@@ -43,6 +136,26 @@
 
 <script>
 import LeftMenu from "../components/LeftMenu.vue";
+
+function a() {
+
+var Ctime = 0;
+var Chelp = 0;
+var Cflash = 0;
+var Cbonus = 0;
+var Clike = 0;
+var Cfest = 0;
+var Crubi = 0;
+
+document.getElementById("time").innerHTML=Ctime;
+document.getElementById("help").innerHTML=Chelp;
+document.getElementById("flash").innerHTML=Cflash;
+document.getElementById("bonus").innerHTML=Cbonus;
+document.getElementById("like").innerHTML=Clike;
+document.getElementById("fest").innerHTML=Cfest;
+document.getElementById("rubi").innerHTML=Crubi;
+}
+
 
 export default {
 components: {
@@ -54,12 +167,18 @@ components: {
 <style lang="scss" scoped>
 #admincoin {
   color: white;
- background: linear-gradient(rgb(1, 165, 138), rgb(13, 84, 165));
+  background: linear-gradient(rgb(1, 165, 138), rgb(13, 84, 165));
+  overflow: hidden;
   display: flex;
   flex-direction: row;
   min-height: 100vh;
+  @media only screen and (max-device-width: 480px) {
+  width: 80%;
+  }
   
 }
+
+
 
 .menu {
   width: 6%;
@@ -67,9 +186,116 @@ components: {
   position: fixed;
   border-right: 2px solid rgba(255, 255, 255, 0.513);
 
-  @media only screen and (max-device-width: 480px) {
-    display: none;
-  }
+ 
+}
+
+.addcoinborder{
+  height: 70%;
+}
+
+
+.add{
+  width: 60%;
+  font-size: 25px;
+  background: linear-gradient(Tomato, OrangeRed);
+  border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.add > button{
+  z-index: 1;
+  font-size: inherit;
+  font-family: inherit;
+  color: white;
+  padding: 5px;
+  outline: none;
+  border: none;
+  background-color: #b14d2f;
+  overflow: hidden;
+  border-radius: 50px;
+  margin-top: -290px;
+  margin-right: -210px;
+}
+
+.addcoincell{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 15px;  
+}
+
+.coinname{
+  width: 60%;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.coincount{
+  width: 40%;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.coincount input {
+  width: 30px;
+  height: 35px;
+}
+
+.coins{
+  width: 50px;
+  height: 35px;
+  background: white;
+  opacity: 65%;
+}
+
+.coincount .minusbutton{
+  width: 45px;
+  height: 35px;
+  z-index: 1;
+  font-size: inherit;
+  font-family: inherit;
+  color: white;
+  // padding: 5px 10px;
+  outline: none;
+  border: none;
+  background: rgb(177, 67, 4);
+  overflow: hidden;
+  border-radius: 50px 0px 0px 50px;
+  
+}
+.coincount .plusbutton{
+  width: 45px;
+  height: 35px;
+  z-index: 1;
+  font-size: inherit;
+  font-family: inherit;
+  color: white;
+  // padding: 5px 10px;
+  outline: none;
+  border: none;
+  background: rgb(177, 67, 4);
+  overflow: hidden;
+  border-radius: 0px 50px 50px 0px;
+  
+}
+
+
+.coinnamerubi{
+  width: 60%;
+  font-size: 25px;
+  background: #db843a;
+  border-radius: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 
@@ -84,7 +310,6 @@ body {
   width: 553px;
   text-align: center;
   align-items: center;
-  
 }
 
 .container > .dropdown {
@@ -110,7 +335,9 @@ body {
   background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.06));
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
-  
+  @media only screen and (max-device-width: 480px) {
+  width: 49%;
+  }
 }
 
 .dropdown:before, .dropdown:after {
@@ -195,14 +422,24 @@ body {
 }
 
 .dropdown-dark {
-  background: #ffffff;
-  border-color: #111111 #0a0a0a black;
-  background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
-  background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
-  background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
-  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.4));
-  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2);
+   display: flex;
+  position: relative;
+  overflow: hidden;
+  height: 28px;
+  width: 443px;
+  background: #f2f2f2;
+  border: 1px solid;
+  border-color: white #f7f7f7 whitesmoke;
+  border-radius: 3px;
+  background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+  background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+  background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.06));
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+  @media only screen and (max-device-width: 480px) {
+  width: 49%;
+  }
 }
 
 .dropdown-dark:before {
@@ -214,7 +451,7 @@ body {
 }
 
 .dropdown-dark .dropdown-select {
-  color: #84888b;
+  color: #ffffff;
   text-shadow: 0 1px black;
   background: #444;  /* Fallback for IE 8 */
    color: #62717a;
@@ -234,16 +471,16 @@ body {
 
 .container>h1 {
   text-align: center;
-  margin: 37px
+  margin: 37px;
 }
 
 .container>p {
-  margin-right: 372px;
+  margin-right: 330px;
   margin-bottom: -35px;
 }
 
 .groop>p {
-  margin-right: 325px;
+  margin-right: 375px;
   margin-bottom: -35px;
 }
 
@@ -257,8 +494,11 @@ body {
   padding: 10px 15px;
   border-radius: 6px;
   width: 110px;
-  margin-left: 205px;
+  margin-left: 199px;
   margin-top: -15px;
+  @media only screen and (max-device-width: 480px) {
+  margin-left: 85px;
+  }
 
 }
 
@@ -274,8 +514,6 @@ body {
   color: white;
   font-weight: 500;
   text-align: center;
-
-  
 }
 .find-container input::placeholder {
   color: white;
@@ -293,30 +531,19 @@ body {
   padding: 0.5em 1em;
   outline: none;
   border: none;
-  background-color: hsl(236, 32%, 26%);
+  background-color: #00a48a;
   overflow: hidden;
   cursor: pointer;
   border-radius: 10px;
-  margin-top: 18px;
+  margin-top: 9px;
   align-items: center;
-}
-.buy-btn::after {
-  content: '';
-  z-index: -1;
-  background-color: hsla(0, 0%, 100%, 0.2);
-  position: absolute;
-  top: -50%;
-  bottom: -50%;
-  width: 1.25em;
-  transform: translate3d(-525%, 0, 0) rotate(35deg);
+  margin-right: 13px;
 }
 
-.buy-btn:hover::after {
-  transition: transform 0.45s ease-in-out;
-  transform: translate3d(200%, 0, 0) rotate(35deg);
-}
 .buy-btn:focus {
   outline: none;
+  border-style: none;
+  
 }
 // .buy-btn:hover {
 //   border: 3px solid #694dc6;
