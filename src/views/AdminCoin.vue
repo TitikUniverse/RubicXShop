@@ -37,7 +37,7 @@
       </div>
       <div class="coincount">
         <button class="minusbutton">-</button>
-          <div class="coins" id="time" value="0"></div> 
+         <input class="Flash">
         <button class="plusbutton">+</button>
       </div>
     </div>
@@ -48,7 +48,7 @@
       </div>
       <div class="coincount">
         <button class="minusbutton">-</button>
-            <div id="help" class="coins" value="0"></div>
+            <input class="Flash">
         <button class="plusbutton">+</button>
       </div>
     </div>
@@ -59,7 +59,7 @@
       </div>
       <div class="coincount">
         <button class="minusbutton">-</button>
-          <div class="coins" id="flash" value="0"></div>
+         <input class="Flash">
         <button class="plusbutton">+</button>
       </div>
     </div>
@@ -70,7 +70,7 @@
       </div>
       <div class="coincount">
         <button class="minusbutton">-</button>
-          <div class="coins" id="bonus" value="0"></div>
+          <input class="Flash">
        <button class="plusbutton">+</button>
       </div>
     </div>
@@ -81,7 +81,7 @@
       </div>
       <div class="coincount">
         <button class="minusbutton">-</button>
-          <div class="coins" id="like" value="0"></div>
+          <input class="Flash">
         <button class="plusbutton">+</button>
       </div>
     </div>
@@ -92,7 +92,7 @@
       </div>
       <div class="coincount">
         <button class="minusbutton">-</button>
-          <div class="coins" id="fest" value="" ></div>
+         <input class="Flash">
         <button class="plusbutton">+</button>
       </div>
     </div>
@@ -103,7 +103,7 @@
       </div>
       <div class="coincount">
         <button class="minusbutton">-</button>
-        <div class="coins" id="rubi"  ></div>
+       <input class="Flash">
         <button class="plusbutton">+</button>
       </div>
     </div>
@@ -179,7 +179,9 @@ components: {
 }
 
 
-
+.Flash{
+ size: 100px;
+}
 .menu {
   width: 6%;
   height: 100vh;
@@ -266,7 +268,8 @@ components: {
   // padding: 5px 10px;
   outline: none;
   border: none;
-  background: rgb(177, 67, 4);
+  background-color: #1274e4;
+
   overflow: hidden;
   border-radius: 50px 0px 0px 50px;
   
@@ -281,7 +284,7 @@ components: {
   // padding: 5px 10px;
   outline: none;
   border: none;
-  background: rgb(177, 67, 4);
+  background: rgb(87 116 182);
   overflow: hidden;
   border-radius: 0px 50px 50px 0px;
   

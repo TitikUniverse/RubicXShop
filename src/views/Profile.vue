@@ -13,9 +13,7 @@
           <div class="description">
             <span id="name">{{ currentuser.name }}</span>
             <span id="age">{{ currentuser.age }} годика</span>
-            <span id="groupnumber"
-              >Номер группы: {{ currentuser.groupnumber }}</span
-            >
+            <span id="groupnumber">Номер группы: {{ currentuser.groupnumber }}</span>
           </div>
         </div>
       </div>
@@ -57,7 +55,7 @@ export default {
         name: "Семён",
         age: 21,
         groupnumber: "PS  212019",
-        role: "admin",
+        role: "user",
       },
     };
   },
@@ -65,6 +63,7 @@ export default {
     LeftMenu,
   },
 };
+
 </script>
 
 <style>
