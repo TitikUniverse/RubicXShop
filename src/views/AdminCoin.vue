@@ -17,106 +17,18 @@
       <option value="3">3</option>
     </select>
   </div>
-  <div class="groop">
-    <p>Студент:</p>
-  </div>
-  <div class="dropdown dropdown-dark">
-    <select name="two" class="dropdown-select">
-      <option value="">Выбрать</option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-    </select>
-  </div>
 
-  <div class="addcoinborder">
-
-    <div class="addcoincell">
-      <div class="coinname">
-        <span>TimeCoin</span>
-      </div>
-      <div class="coincount">
-        <button class="minusbutton">-</button>
-         <input class="Flash">
-        <button class="plusbutton">+</button>
-      </div>
+  <div class="addition-coins">
+    <div class="student-info">
+      <CoinInputTemplate/>
     </div>
-
-    <div class="addcoincell">
-      <div class="coinname">
-        <span>HelpCoin</span>
-      </div>
-      <div class="coincount">
-        <button class="minusbutton">-</button>
-            <input class="Flash">
-        <button class="plusbutton">+</button>
-      </div>
-    </div>
-
-    <div class="addcoincell">
-      <div class="coinname">
-        <span>FlashCoin</span>
-      </div>
-      <div class="coincount">
-        <button class="minusbutton">-</button>
-         <input class="Flash">
-        <button class="plusbutton">+</button>
-      </div>
-    </div>
-
-    <div class="addcoincell">
-      <div class="coinname">
-        <span>BonusCoin</span>
-      </div>
-      <div class="coincount">
-        <button class="minusbutton">-</button>
-          <input class="Flash">
-       <button class="plusbutton">+</button>
-      </div>
-    </div>
-
-    <div class="addcoincell">
-      <div class="coinname">
-        <span>LikeCoin</span>
-      </div>
-      <div class="coincount">
-        <button class="minusbutton">-</button>
-          <input class="Flash">
-        <button class="plusbutton">+</button>
-      </div>
-    </div>
-
-    <div class="addcoincell">
-      <div class="coinname">
-        <span>FestCoin</span>
-      </div>
-      <div class="coincount">
-        <button class="minusbutton">-</button>
-         <input class="Flash">
-        <button class="plusbutton">+</button>
-      </div>
-    </div>
-
-    <div class="addcoincell">
-      <div class="coinnamerubi">
-        <span>RubiCoin</span>
-      </div>
-      <div class="coincount">
-        <button class="minusbutton">-</button>
-       <input class="Flash">
-        <button class="plusbutton">+</button>
-      </div>
-    </div>
-    
-    
-    
   </div>
 
 
-    <!-- Сохранение коинов -->
+    <!-- Сохранение коинов
     <div class="add">
       <button>Сохранить</button>
-    </div>
+    </div> -->
  
  <!-- <div class="find-container">
         <input type="text" placeholder="Кол-во" />
@@ -136,6 +48,7 @@
 
 <script>
 import LeftMenu from "../components/LeftMenu.vue";
+import CoinInputTemplate from "../components/CoinInputTemplate.vue"
 
 function a() {
 
@@ -160,6 +73,7 @@ document.getElementById("rubi").innerHTML=Crubi;
 export default {
 components: {
     LeftMenu,
+    CoinInputTemplate,
   },
 }
 </script>
@@ -191,8 +105,24 @@ components: {
  
 }
 
-.addcoinborder{
-  height: 70%;
+.addition-coins{
+  
+}
+
+.student-info{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;  
+}
+.student-name{
+  height: 30px;
+  font-size: 15px;
+}
+
+.addition{
+  width: 100%;
+  height: 50px;
 }
 
 
@@ -237,19 +167,8 @@ components: {
   justify-content: center;
 }
 
-.coincount{
-  width: 40%;
-  font-size: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
 
-.coincount input {
-  width: 30px;
-  height: 35px;
-}
+
 
 .coins{
   width: 50px;
@@ -258,37 +177,7 @@ components: {
   opacity: 65%;
 }
 
-.coincount .minusbutton{
-  width: 45px;
-  height: 35px;
-  z-index: 1;
-  font-size: inherit;
-  font-family: inherit;
-  color: white;
-  // padding: 5px 10px;
-  outline: none;
-  border: none;
-  background-color: #1274e4;
 
-  overflow: hidden;
-  border-radius: 50px 0px 0px 50px;
-  
-}
-.coincount .plusbutton{
-  width: 45px;
-  height: 35px;
-  z-index: 1;
-  font-size: inherit;
-  font-family: inherit;
-  color: white;
-  // padding: 5px 10px;
-  outline: none;
-  border: none;
-  background: rgb(87 116 182);
-  overflow: hidden;
-  border-radius: 0px 50px 50px 0px;
-  
-}
 
 
 .coinnamerubi{
