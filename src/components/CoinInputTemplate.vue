@@ -4,27 +4,16 @@
         <span>Титов Семен</span>
       </div>
         <div class="addition">
-          <button class="minusbutton">-</button>
-            <input class="Flash">
-          <button class="plusbutton">+</button>
-          <button class="minusbutton">-</button>
-            <input class="Flash">
-          <button class="plusbutton">+</button>
-          <button class="minusbutton">-</button>
-            <input class="Flash">
-          <button class="plusbutton">+</button>
-          <button class="minusbutton">-</button>
-            <input class="Flash">
-          <button class="plusbutton">+</button>
-          <button class="minusbutton">-</button>
-            <input class="Flash">
-          <button class="plusbutton">+</button>
-          <button class="minusbutton">-</button>
-            <input class="Flash">
-          <button class="plusbutton">+</button>
-          <button class="minusbutton">-</button>
-            <input class="Flash">
-          <button class="plusbutton">+</button>
+          <div class="addition-item">
+            <button class="minusbutton">-</button>
+              <input class="Flash">
+            <button class="plusbutton">+</button>
+          </div>
+          <div class="addition-item">
+            <button class="minusbutton">-</button>
+              <input class="Flash">
+            <button class="plusbutton">+</button>
+          </div>
         </div>
     </div>
 </template>
@@ -42,7 +31,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: left;
 }
 .coincount input {
   width: 30%;
@@ -85,11 +74,14 @@ export default {
   
 }
 .addition{
-  width: 50%;
   height: 50%;
 
   display: flex;
   flex-direction: row;
+}
+
+.addition-item {
+  width: 110px;
 }
 .Flash{
  size: 100px;
