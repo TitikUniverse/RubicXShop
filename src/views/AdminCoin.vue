@@ -93,9 +93,7 @@ components: {
 }
 
 
-.Flash{
- size: 100px;
-}
+
 .menu {
   width: 6%;
   height: 100vh;
@@ -105,9 +103,6 @@ components: {
  
 }
 
-.addition-coins{
-  
-}
 
 .student-info{
   width: 100%;

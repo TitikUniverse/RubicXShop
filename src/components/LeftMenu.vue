@@ -1,16 +1,16 @@
 <template>
   <div class="main">
     <div class="icon-container">
-        <button class="main-btn" href=""><router-link to="/profile"><span class="material-icons-outlined md-42 md-light">home</span></router-link></button>
+        <router-link to="/profile"><button class="main-btn" href=""><span class="material-icons-outlined md-42 md-light">home</span></button></router-link>
         <button class="main-btn" href=""><span class="material-icons-outlined md-42 md-light">email</span></button>
         <button class="main-btn" href=""><span class="material-icons-outlined md-42 md-light">import_contacts</span></button>
-        <button class="main-btn" href=""><router-link to="/shop"><span class="material-icons-outlined md-42 md-light">local_mall</span></router-link></button>
-      <div class="r-icon">
+        <router-link to="/shop"><button class="main-btn" href=""><span class="material-icons-outlined md-42 md-light">local_mall</span></button></router-link>
+       <div class="r-icon">
        <img src="https://media.discordapp.net/attachments/528856767199969280/931705208537489418/-2.png?width=566&height=566" alt="">
-      </div>
-  </div>
-    
-  </div>
+       </div>
+     </div>
+</div>
+  
   
 </template>
 
@@ -47,6 +47,8 @@ export default {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  
+  
 }
 
 
