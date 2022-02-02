@@ -126,6 +126,8 @@ export default {
 .student-name{
   height: 30px;
   font-size: 20px;
+  text-align: left;
+  margin-left: 13px;
 }
 
 .coinname{
