@@ -93,9 +93,7 @@ components: {
 }
 
 
-.Flash{
- size: 100px;
-}
+
 .menu {
   width: 6%;
   height: 100vh;
@@ -105,9 +103,6 @@ components: {
  
 }
 
-.addition-coins{
-  
-}
 
 .student-info{
   width: 100%;
@@ -150,44 +145,6 @@ components: {
   border-radius: 50px;
   margin-top: -290px;
   margin-right: -210px;
-}
-
-.addcoincell{
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 15px;  
-}
-
-.coinname{
-  width: 60%;
-  font-size: 25px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-
-
-
-.coins{
-  width: 50px;
-  height: 35px;
-  background: white;
-  opacity: 65%;
-}
-
-
-
-
-.coinnamerubi{
-  width: 60%;
-  font-size: 25px;
-  background: #db843a;
-  border-radius: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 

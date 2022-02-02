@@ -42,7 +42,11 @@ export default {
   float: left;
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.379);
-  margin: 10px 10px;
+  margin: 17px 17px;
+
+  &:hover {
+    transform: scale(1.15);
+  }
 
 }
 

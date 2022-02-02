@@ -326,12 +326,8 @@ export default {
   border: none;
   outline: none;
 }
-.second-row .hello {
 
-}
-.second-row .schedule {
 
-}
 
 .achievements-title {
   width: 100%;

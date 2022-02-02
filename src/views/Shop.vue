@@ -31,9 +31,7 @@
      <div class="right-side">
         <div class="profile-in-header">
           <div class="basket">
-            <router-link to="/orders">
-            <button class="main-btn purple-color" href=""><span class="material-icons-outlined md-36 md-light">local_mall</span></button>
-            </router-link>
+            <router-link to="/orders"><button class="main-btn purple-color" href=""><span class="material-icons-outlined md-36 md-light">local_mall</span></button></router-link>
           </div>
           <router-link to="/profile" tag="div">
           <div class="profile">
@@ -155,9 +153,10 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  
 
   
+  
+
 }
 
 .find-container {
