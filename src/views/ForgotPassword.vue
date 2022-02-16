@@ -24,7 +24,7 @@
 												<i class="input-icon uil uil-at"></i>
 											</div>	
 											
-											<router-link to="/profile"><button href="#" class="btn mt-4">Заменить парол</button></router-link>
+											<router-link to="/profile"><button href="#" class="btn mt-4">Заменить пароль</button></router-link>
 				      					</div>
 			      					</div>
 			      				</div>
