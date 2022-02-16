@@ -6,45 +6,25 @@
 			<div class="row full-height justify-content-center">
 				<div class="col-12 text-center align-self-center py-5">
 					<div class="section pb-5 pt-5 pt-sm-2 text-center">
-						<h6 class="mb-0 pb-3"><span>Войти</span><span>Регистрация</span></h6>
-			          	<input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
-			          	<label for="reg-log"></label>
+						
 						<div class="card-3d-wrap mx-auto">
 							<div class="card-3d-wrapper">
-								<div class="card-front">
-									<div class="center-wrap">
-										<div class="section text-center">
-											<h4 class="mb-4 pb-3"> Войти</h4>
-											<div class="form-group">
-												<input type="email" name="logemail" class="form-style" placeholder="Почта" id="logemail" autocomplete="off">
-												<i class="input-icon uil uil-at"></i>
-											</div>	
-											<div class="form-group mt-2">
-												<input type="password" name="logpass" class="form-style" placeholder="Пароль" id="logpass" autocomplete="off">
-												<i class="input-icon uil uil-lock-alt"></i>
-											</div>
-											<router-link to="/profile"><button href="" class="btn mt-4">Войти</button></router-link>
-                            				<p class="mb-0 mt-4 text-center"><router-link to="/forgot"><a href="#0" class="link">Забыли свой пароль?</a></router-link></p>
-				      					</div>
-			      					</div>
+								<div class="card-front">		
 			      				</div>
 								<div class="card-back">
 									<div class="center-wrap">
 										<div class="section text-center">
-											<h4 class="mb-4 pb-3">Регистрация</h4>
+											<h4 class="mb-4 pb-3">Замена пароля</h4>
 											<div class="form-group">
-												<input type="text" name="logname" class="form-style" placeholder="Полное Имя" id="logname" autocomplete="off">
+												<input type="text" name="logname" class="form-style" placeholder="Новый пароль" id="logname" autocomplete="off">
 												<i class="input-icon uil uil-user"></i>
 											</div>	
 											<div class="form-group mt-2">
-												<input type="email" name="logemail" class="form-style" placeholder="Твой Email" id="logemail" autocomplete="off">
+												<input type="email" name="logemail" class="form-style" placeholder="Ещё раз" id="logemail" autocomplete="off">
 												<i class="input-icon uil uil-at"></i>
 											</div>	
-											<div class="form-group mt-2">
-												<input type="password" name="logpass" class="form-style" placeholder="Твой пароль" id="logpass" autocomplete="off">
-												<i class="input-icon uil uil-lock-alt"></i>
-											</div>
-											<router-link to="/profile"><button href="#" class="btn mt-4">Зарегестртроваться</button></router-link>
+											
+											<router-link to="/profile"><button href="#" class="btn mt-4">Заменить парол</button></router-link>
 				      					</div>
 			      					</div>
 			      				</div>
@@ -120,46 +100,6 @@ h6 span{
 .full-height{
   min-height: 100vh;
 }
-[type="checkbox"]:checked,
-[type="checkbox"]:not(:checked){
-  position: absolute;
-  left: -9999px;
-}
-.checkbox:checked + label,
-.checkbox:not(:checked) + label{
-  position: relative;
-  display: block;
-  text-align: center;
-  width: 60px;
-  height: 16px;
-  border-radius: 8px;
-  padding: 0;
-  margin: 10px auto;
-  cursor: pointer;
-  background-color: #ffffff;
-}
-.checkbox:checked + label:before,
-.checkbox:not(:checked) + label:before{
-  position: absolute;
-  display: block;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  color: #ffffff;
-  background: linear-gradient(rgb(1, 165, 138), rgb(13, 84, 165));
-  font-family: 'unicons';
-  content: '\eb4f';
-  z-index: 20;
-  top: -10px;
-  left: -10px;
-  line-height: 36px;
-  text-align: center;
-  font-size: 24px;
-  transition: all 0.5s ease;
-}
-.checkbox:checked + label:before {
-  transform: translateX(44px) rotate(-270deg);
-}
 
 
 .card-3d-wrap {
@@ -201,12 +141,7 @@ h6 span{
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-.card-back {
-  transform: rotateY(180deg);
-}
-.checkbox:checked ~ .card-3d-wrap .card-3d-wrapper {
-  transform: rotateY(180deg);
-}
+
 .center-wrap{
   position: absolute;
   width: 100%;

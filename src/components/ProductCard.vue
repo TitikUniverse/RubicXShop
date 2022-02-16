@@ -94,7 +94,7 @@ export default {
 // }
 
 .purple-color {
-  background-color: #fa8100;
+  background-color: #557bb6;
 }
 
 span{

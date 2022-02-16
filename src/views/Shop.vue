@@ -216,7 +216,7 @@ export default {
   background-color: #fa810000;
 }
 .orange-color {
-  background-color: #fa8100;
+  background-color: #557bb6;
 }
 
 .right-side {

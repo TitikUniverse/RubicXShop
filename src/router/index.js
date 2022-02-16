@@ -5,10 +5,6 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
-    redirect: "/auth"
-  },
-  {
     path: '/auth',
     component: () => import('@/views/Login.vue')
   },
@@ -44,7 +40,10 @@ const routes = [
     path: '/applications',
     component: () => import('@/views/Applications.vue')
   },
-  
+  {
+    path: '/forgot',
+    component: () => import('@/views/ForgotPassword.vue')
+  },
   
 ]
 
