@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <div class="icon-container">
-        <router-link to="/profile"><button class="main-btn" href=""><span class="material-icons-outlined md-42 md-light">home</span></button></router-link>
+        <router-link to="/profile"><button class="main-btn" href=""><span class="material-icons-outlined md-42 md-light">account_circle</span></button></router-link>
         <button class="main-btn" href=""><span class="material-icons-outlined md-42 md-light">email</span></button>
         <button class="main-btn" href=""><span class="material-icons-outlined md-42 md-light">import_contacts</span></button>
         <router-link to="/shop"><button class="main-btn" href=""><span class="material-icons-outlined md-42 md-light">local_mall</span></button></router-link>

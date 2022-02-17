@@ -1,77 +1,58 @@
 <template>
-  <div>
-    <div class="section main-section">
-      <div class="container">
-        <div class="row full-height justify-content-center">
-          <div class="col-12 text-center align-self-center py-5">
-            <div class="section pb-5 pt-5 pt-sm-2 text-center">
-              <!-- <h6 class="mb-0 pb-3">
-                <span>Войти</span><span>Регистрация</span>
-              </h6> -->
-              <input
-                class="checkbox"
-                type="checkbox"
-                id="reg-log"
-                name="reg-log"
-              />
-              <div class="card-front">
-                <div class="center-wrap">
-                  <div class="section text-center">
-                    <h4 class="mb-4 pb-3">Войти</h4>
-                    <div class="form-group">
-                      <input
-                        type="email"
-                        name="logemail"
-                        class="form-style"
-                        placeholder="Почта"
-                        id="logemail"
-                        autocomplete="off"
-                      />
-                      <i class="input-icon uil uil-at"></i>
-                    </div>
-                    <div class="form-group mt-2">
-                      <input
-                        type="password"
-                        name="logpass"
-                        class="form-style"
-                        placeholder="Пароль"
-                        id="logpass"
-                        autocomplete="off"
-                      />
-                      <i class="input-icon uil uil-lock-alt"></i>
-                    </div>
-                    <router-link to="/profile"
-                      ><button href="" class="btn mt-4">
-                        Войти
-                      </button></router-link
-                    >
-                    <p class="mb-0 mt-4 text-center">
-                      <router-link to="/forgot"
-                        ><a href="#0" class="link"
-                          >Забыли свой пароль?</a
-                        ></router-link
-                      >
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+  <div class="card-back">
+    <div class="center-wrap">
+      <div class="section text-center">
+        <h4 class="mb-4 pb-3">Регистрация</h4>
+        <div class="form-group">
+          <input
+            type="text"
+            name="logname"
+            class="form-style"
+            placeholder="Полное Имя"
+            id="logname"
+            autocomplete="off"
+          />
+          <i class="input-icon uil uil-user"></i>
         </div>
+        <div class="form-group mt-2">
+          <input
+            type="email"
+            name="logemail"
+            class="form-style"
+            placeholder="Твой Email"
+            id="logemail"
+            autocomplete="off"
+          />
+          <i class="input-icon uil uil-at"></i>
+        </div>
+        <div class="form-group mt-2">
+          <input
+            type="password"
+            name="logpass"
+            class="form-style"
+            placeholder="Твой пароль"
+            id="logpass"
+            autocomplete="off"
+          />
+          <i class="input-icon uil uil-lock-alt"></i>
+        </div>
+        <router-link to="/profile"
+          ><button href="#" class="btn mt-4">
+            Зарегестртроваться
+          </button></router-link
+        >
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+
+}
 </script>
 
 <style scoped>
-/* Please ❤ this if you like it! */
-
-@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900");
-
 body {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
@@ -184,19 +165,17 @@ h6 span {
 }
 .card-front,
 .card-back {
-  width: 40%;
-  height: 400px;
+  width: 100%;
+  height: 100%;
   background-color: #17171a;
   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg");
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: 300%;
+  position: absolute;
   border-radius: 6px;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-
+  left: 0;
+  top: 0;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
@@ -212,8 +191,8 @@ h6 span {
 }
 .center-wrap {
   position: absolute;
-  /* width: 100%; */
-  padding: 0 90px;
+  width: 100%;
+  padding: 0 35px;
   top: 50%;
   left: 0;
   transform: translate3d(0, -50%, 35px) perspective(100px);
