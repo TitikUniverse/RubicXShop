@@ -140,6 +140,8 @@ h6 span{
   -moz-backface-visibility: hidden;
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
+  
+  
 }
 
 .center-wrap{

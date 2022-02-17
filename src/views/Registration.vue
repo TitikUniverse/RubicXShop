@@ -1,58 +1,128 @@
 <template>
-  <div class="card-back">
-    <div class="center-wrap">
-      <div class="section text-center">
-        <h4 class="mb-4 pb-3">Регистрация</h4>
-        <div class="form-group">
-          <input
-            type="text"
-            name="logname"
-            class="form-style"
-            placeholder="Полное Имя"
-            id="logname"
-            autocomplete="off"
-          />
-          <i class="input-icon uil uil-user"></i>
+  <div>
+    <div class="section main-section">
+      <div class="container">
+        <div class="row full-height justify-content-center">
+          <div class="col-12 text-center align-self-center py-5">
+            <div class="section pb-5 pt-5 pt-sm-2 text-center">
+              <!-- <h6 class="mb-0 pb-3">
+                <span>Войти</span><span>Регистрация</span>
+              </h6> -->
+              <input
+                class="checkbox"
+                type="checkbox"
+                id="reg-log"
+                name="reg-log"
+              />
+              <div class="card-front">
+                <div class="center-wrap">
+                  <button class="generate" @click="insertPassword()"></button>
+                  <div class="section text-center">
+                    <h4 class="mb-4 pb-3">Регистрация пользователя</h4>
+                    <div class="form-group">
+                      <input
+                        type="string"
+                        name="logemail"
+                        class="form-style"
+                        placeholder="Логин"
+                        id="logemail"
+                        autocomplete="off"
+                      />
+                      <i class="input-icon uil uil-at"></i>
+                    </div>
+                    <div class="form-group mt-2">
+                      <input
+                        type="text"
+                        name="FullName"
+                        class="form-style"
+                        placeholder="Полное имя"
+                        id="Name"
+                        autocomplete="off"
+                        />
+                    </div>
+                    
+                    <div class="form-group mt-2">
+                      
+                      <input
+                        type="password"
+                        name="logpass"
+                        class="form-style"
+                        placeholder="Пароль"
+                        id="logpass"
+                        autocomplete="off"
+                        v-bind="this.pass"
+                      />
+                      <i class="input-icon uil uil-lock-alt"></i>
+                    </div>
+                    
+                    <router-link to="/profile"
+                      ><button href="" class="btn mt-4">
+                        Зарегистрировать
+                      </button></router-link
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="form-group mt-2">
-          <input
-            type="email"
-            name="logemail"
-            class="form-style"
-            placeholder="Твой Email"
-            id="logemail"
-            autocomplete="off"
-          />
-          <i class="input-icon uil uil-at"></i>
-        </div>
-        <div class="form-group mt-2">
-          <input
-            type="password"
-            name="logpass"
-            class="form-style"
-            placeholder="Твой пароль"
-            id="logpass"
-            autocomplete="off"
-          />
-          <i class="input-icon uil uil-lock-alt"></i>
-        </div>
-        <router-link to="/profile"
-          ><button href="#" class="btn mt-4">
-            Зарегестртроваться
-          </button></router-link
-        >
       </div>
     </div>
+
   </div>
 </template>
 
 <script>
-export default {
+export default{
+  data() {
+    return {
+      pass: ""
+    }
+  },
+ mounted: function() {
+    if(this.auto == 'true' || this.auto == 1) {
+      this.generate();
+    }
+  },
+  methods: {
 
-}
+    insertPassword() {
+       this.pass = generate();
+    },
+    
+    generate () {
+      let charactersArray = this.characters.split(',');  
+      let CharacterSet = '';
+      let password = '';
+      
+      if( charactersArray.indexOf('a-z') >= 0) {
+        CharacterSet += 'abcdefghijklmnopqrstuvwxyz';
+      }
+      if( charactersArray.indexOf('A-Z') >= 0) {
+        CharacterSet += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+      }
+      if( charactersArray.indexOf('0-9') >= 0) {
+        CharacterSet += '0123456789';
+      }
+      if( charactersArray.indexOf('#') >= 0) {
+        CharacterSet += '![]{}()%&*$#^<>~@|';
+      }
+      
+      for(let i=0; i < this.size; i++) {
+        password += CharacterSet.charAt(Math.floor(Math.random() * CharacterSet.length));
+      }
+      this.password = password;
+    }
+    
+  }
+};
+
+
 </script>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900");
+
 body {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
@@ -143,6 +213,17 @@ h6 span {
   transform: translateX(44px) rotate(-270deg);
 }
 
+
+.generate{
+  position: absolute;
+  width: 7.5%;
+  height: 30px;
+  top: 220px;
+  right: 50px;
+
+}
+
+
 .card-3d-wrap {
   position: relative;
   width: 440px;
@@ -152,6 +233,10 @@ h6 span {
   transform-style: preserve-3d;
   perspective: 800px;
   margin-top: 60px;
+}
+
+.form-group {
+  margin-bottom: 25px;
 }
 .card-3d-wrapper {
   width: 100%;
@@ -165,23 +250,30 @@ h6 span {
 }
 .card-front,
 .card-back {
-  width: 100%;
-  height: 100%;
+  width: 40%;
+  height: 400px;
   background-color: #17171a;
   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg");
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: 300%;
-  position: absolute;
   border-radius: 6px;
-  left: 0;
-  top: 0;
+
+  margin-left: 30%;
+  align-items: center;
+  
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
+  
 }
 .card-back {
   transform: rotateY(180deg);
@@ -191,8 +283,8 @@ h6 span {
 }
 .center-wrap {
   position: absolute;
-  width: 100%;
-  padding: 0 35px;
+  /* width: 100%; */
+  padding: 0 90px;
   top: 50%;
   left: 0;
   transform: translate3d(0, -50%, 35px) perspective(100px);

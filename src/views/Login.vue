@@ -60,16 +60,15 @@
         </div>
       </div>
     </div>
+
   </div>
 </template>
 
 <script>
-export default {};
+export default{};
 </script>
 
 <style scoped>
-/* Please ❤ this if you like it! */
-
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900");
 
 body {
@@ -193,6 +192,10 @@ h6 span {
   background-size: 300%;
   border-radius: 6px;
 
+  margin-left: 30%;
+  align-items: center;
+  
+
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -203,6 +206,7 @@ h6 span {
   -moz-backface-visibility: hidden;
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
+  
 }
 .card-back {
   transform: rotateY(180deg);

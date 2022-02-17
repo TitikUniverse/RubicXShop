@@ -66,13 +66,16 @@ export default {
 
 </script>
 
-<style>
+<style lang="scss" scoped>
 #home {
   color: white;
   background: linear-gradient(rgb(1, 165, 138), rgb(13, 84, 165));
   display: flex;
   flex-direction: row;
   min-height: 100vh;
+
+  @media only screen and (max-device-width: 379px) {    width: 390px;
+  }
 }
 
 .menu {
@@ -93,6 +96,14 @@ html {
   width: 250px;
   border-radius: 200px;
   padding: 10px 10px;
+
+  @media only screen and (max-device-width: 480px) {
+    
+    left: 6%;
+    width: 30%;
+    height: 30%;
+    margin-top:41px;
+  }
 }
 #logo {
   display: flex;
@@ -109,22 +120,47 @@ html {
 #logo > .description > #name {
   font-size: 50px;
   padding-left: 10px;
+
+    @media only screen and (max-device-width: 480px) {
+    
+    font-size: 30px;
+    padding-left: 10px;
+  }
 }
 #logo > .description > #age {
   opacity: 88%;
   font-size: 22px;
   padding-left: 15px;
+
+  @media only screen and (max-device-width: 480px) {
+    
+    font-size: 18px;
+    padding-left: 10px;
+  }
 }
 #logo > .description > #groupnumber {
   opacity: 88%;
   font-size: 22px;
   padding-left: 15px;
+
+    @media only screen and (max-device-width: 480px) {
+    
+    font-size: 18px;
+    padding-left: 10px;
+  }
 }
 .second-row {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   padding: 30px 10px 10px;
+
+  @media only screen and (min-device-width: 480px) {
+    border-right: 2px solid rgba(255, 255, 255, 0.513);
+    position: relative;
+    left: 6%;
+    width: 70%;
+  }
 }
 
 .content {
@@ -134,6 +170,18 @@ html {
   left: 6%;
   position: relative;
   width: 94%;
+
+ @media only screen and (min-device-width: 480px) {
+    border-right: 2px solid rgba(255, 255, 255, 0.513);
+    position: relative;
+    left: 6%;
+    width: 70%;
+  }
+  @media only screen and (max-device-width: 479px) {
+    width: 100%;
+  }
+
+
 }
 table {
   font-family: sans-serif;
@@ -141,6 +189,10 @@ table {
   border-spacing: 15px;
   color: rgb(255, 255, 255);
   border-radius: 20px;
+
+  @media only screen and (max-device-width: 479px) {
+    width: 100%;
+  }
 }
 th {
   font-size: 18px;

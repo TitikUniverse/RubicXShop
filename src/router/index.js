@@ -45,7 +45,7 @@ const routes = [
     component: () => import('@/views/ForgotPassword.vue')
   },
   {
-    path: '/new_user',
+    path: '/reg',
     component: () => import('@/views/Registration.vue')
   },
   
