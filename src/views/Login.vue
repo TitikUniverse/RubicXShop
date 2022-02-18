@@ -215,12 +215,12 @@ h6 span {
   transform: rotateY(180deg);
 }
 .center-wrap {
-  position: absolute;
-  /* width: 100%; */
-  padding: 0 90px;
-  top: 50%;
-  left: 0;
-  transform: translate3d(0, -50%, 35px) perspective(100px);
+  /* position: absolute; */
+  width: 70%;
+  /* padding: 0 90px; */
+  /* top: 50%; */
+  /* left: 0; */
+  /* transform: translate3d(0, -50%, 35px) perspective(100px); */
   z-index: 20;
   display: block;
 }

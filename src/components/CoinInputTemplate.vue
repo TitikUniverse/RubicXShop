@@ -1,87 +1,87 @@
 <template>
     <div class="coincount">
       <div class="student-name">
-        <span>Титов Семен</span>
+        <span>Титов<br />Семен</span>
       </div>
-        <div class="addition">
-          <div class="addition-item">
-            <div class="coinname">
-              TimeCoin
-            </div>
-            <div class="addition-button">
-              <button class="minusbutton">-</button>
-                <input class="Flash">
-              <button class="plusbutton">+</button>
-            </div>
-            
+      <div class="addition">
+        <div class="addition-item">
+          <div class="coinname">
+            TimeCoin
           </div>
-          <div class="addition-item">
-            <div class="coinname">
-              HelpCoin
-            </div>
-            <div class="addition-button">
-              <button class="minusbutton">-</button>
-                <input class="Flash">
-              <button class="plusbutton">+</button>
-            </div>
-            
-          </div>
-          <div class="addition-item">
-            <div class="coinname">
-              FlashCoin
-            </div>
-            <div class="addition-button">
-              <button class="minusbutton">-</button>
-                <input class="Flash">
-              <button class="plusbutton">+</button>
-            </div>
-            
-          </div>
-          <div class="addition-item">
-            <div class="coinname">
-              BonusCoin
-            </div>
-            <div class="addition-button">
-              <button class="minusbutton">-</button>
-                <input class="Flash">
-              <button class="plusbutton">+</button>
-            </div>
-            
-          </div>
-          <div class="addition-item">
-            <div class="coinname">
-              LikeCoin
-            </div>
-            <div class="addition-button">
-              <button class="minusbutton">-</button>
-                <input class="Flash">
-              <button class="plusbutton">+</button>
-            </div>
-            
-          </div>
-          <div class="addition-item">
-            <div class="coinname">
-              FestCoin
-            </div>
-            <div class="addition-button">
-              <button class="minusbutton">-</button>
-                <input class="Flash">
-              <button class="plusbutton">+</button>
-            </div>
-            
-          </div>
-          <div class="addition-item">
-            <div class="coinname">
-              RubiCoin
-            </div>
-            <div class="addition-button">
-              <button class="minusbutton">-</button>
-                <input class="Flash">
-              <button class="plusbutton">+</button>
-            </div>
-            
+          <div class="addition-button">
+            <button class="minusbutton">-</button>
+              <input class="Flash">
+            <button class="plusbutton">+</button>
           </div>
         </div>
+
+        <div class="addition-item">
+          <div class="coinname">
+            HelpCoin
+          </div>
+          <div class="addition-button">
+            <button class="minusbutton">-</button>
+              <input class="Flash">
+            <button class="plusbutton">+</button>
+          </div>
+        </div>
+
+        <div class="addition-item">
+          <div class="coinname">
+            FlashCoin
+          </div>
+          <div class="addition-button">
+            <button class="minusbutton">-</button>
+              <input class="Flash">
+            <button class="plusbutton">+</button>
+          </div>
+        </div>
+
+        <div class="addition-item">
+          <div class="coinname">
+            BonusCoin
+          </div>
+          <div class="addition-button">
+            <button class="minusbutton">-</button>
+              <input class="Flash">
+            <button class="plusbutton">+</button>
+          </div>
+        </div>
+
+        <div class="addition-item">
+          <div class="coinname">
+            LikeCoin
+          </div>
+          <div class="addition-button">
+            <button class="minusbutton">-</button>
+              <input class="Flash">
+            <button class="plusbutton">+</button>
+          </div>
+        </div>
+
+        <div class="addition-item">
+          <div class="coinname">
+            FestCoin
+          </div>
+          <div class="addition-button">
+            <button class="minusbutton">-</button>
+              <input class="Flash">
+            <button class="plusbutton">+</button>
+          </div>
+        </div>
+
+        <div class="addition-item">
+          <div class="coinname">
+            RubiCoin
+          </div>
+          <div class="addition-button">
+            <button class="minusbutton">-</button>
+              <input class="Flash">
+            <button class="plusbutton">+</button>
+          </div>
+        </div>
+
+      </div>
     </div>
 </template>
 
@@ -94,12 +94,9 @@ export default {
 
 <style lang=scss scoped>
 .coincount{
-
-  height: 20px;
   font-size: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: left;
   align-items: left;
 }
 .coincount input {
@@ -122,20 +119,6 @@ export default {
   border-radius: 7px 0px 0px 7px;
   
 }
-
-
-.student-name{
-  height: 30px;
-  font-size: 20px;
-  text-align: left;
-  margin-left: 13px;
-}
-
-.coinname{
-  font-size: 15px;
-}
-
-
 .coincount .plusbutton{
   width: 30%;
   height: 100%;
@@ -151,16 +134,30 @@ export default {
   border-radius: 0px 7px 7px 0px;
   
 }
+
+
+.student-name{
+  height: 70px;
+  font-size: 20px;
+  text-align: left;
+  margin-left: 0px;
+}
+
+.coinname{
+  font-size: 15px;
+}
+
 .addition{
   height: 50%;
 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .addition-item {
-  width: 120px;
-  
+  width: 130px;
+  margin-bottom: 15px;
+  text-align: start;
 }
 .Flash{
  size: 100px;

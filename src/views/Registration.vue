@@ -16,7 +16,6 @@
               />
               <div class="card-front">
                 <div class="center-wrap">
-                  <button class="generate" @click="insertPassword()"></button>
                   <div class="section text-center">
                     <h4 class="mb-4 pb-3">Регистрация пользователя</h4>
                     <div class="form-group">
@@ -24,7 +23,7 @@
                         type="string"
                         name="logemail"
                         class="form-style"
-                        placeholder="Логин"
+                        placeholder="Почта"
                         id="logemail"
                         autocomplete="off"
                       />
@@ -39,24 +38,26 @@
                         id="Name"
                         autocomplete="off"
                         />
+                      <i class="input-icon uil material-icons-outlined md-36 md-light">perm_identity</i>
                     </div>
                     
                     <div class="form-group mt-2">
-                      
                       <input
-                        type="password"
+                        :type="passFieldType"
                         name="logpass"
                         class="form-style"
                         placeholder="Пароль"
                         id="logpass"
                         autocomplete="off"
-                        v-bind="this.pass"
+                        v-model="pass"
                       />
                       <i class="input-icon uil uil-lock-alt"></i>
+                      <button class="visibility-btn" @click="togglePassVisibility()"><i class="input-icon-postfix material-icons-outlined md-36 md-light">visibility</i></button>
+                      <button class="btn generate" @click="insertPassword()"><i class="material-icons-outlined">create</i></button>
                     </div>
                     
                     <router-link to="/profile"
-                      ><button href="" class="btn mt-4">
+                      ><button href="" class="btn mt-4 registration">
                         Зарегистрировать
                       </button></router-link
                     >
@@ -76,21 +77,20 @@
 export default{
   data() {
     return {
-      pass: ""
-    }
-  },
- mounted: function() {
-    if(this.auto == 'true' || this.auto == 1) {
-      this.generate();
+      characters: 'a-z,A-Z,0-9',
+      pass: '',
+      passSize: 6,
+      passFieldType: 'password'
     }
   },
   methods: {
-
     insertPassword() {
-       this.pass = generate();
+       this.pass = this.generate();
     },
-    
-    generate () {
+    togglePassVisibility() {
+      this.passFieldType = this.passFieldType === 'password' ? 'text' : 'password'
+    },
+    generate() {
       let charactersArray = this.characters.split(',');  
       let CharacterSet = '';
       let password = '';
@@ -108,16 +108,14 @@ export default{
         CharacterSet += '![]{}()%&*$#^<>~@|';
       }
       
-      for(let i=0; i < this.size; i++) {
+      for(let i=0; i < this.passSize; i++) {
         password += CharacterSet.charAt(Math.floor(Math.random() * CharacterSet.length));
       }
-      this.password = password;
+      console.log(password);
+      return password;
     }
-    
   }
 };
-
-
 </script>
 
 <style scoped>
@@ -216,13 +214,11 @@ h6 span {
 
 .generate{
   position: absolute;
-  width: 7.5%;
-  height: 30px;
-  top: 220px;
-  right: 50px;
-
+  width: 40px;
+  height: 80%;
+  right: -50px;
+  /* background-color: #1f2029; */
 }
-
 
 .card-3d-wrap {
   position: relative;
@@ -235,9 +231,6 @@ h6 span {
   margin-top: 60px;
 }
 
-.form-group {
-  margin-bottom: 25px;
-}
 .card-3d-wrapper {
   width: 100%;
   height: 100%;
@@ -282,19 +275,21 @@ h6 span {
   transform: rotateY(180deg);
 }
 .center-wrap {
-  position: absolute;
-  /* width: 100%; */
-  padding: 0 90px;
-  top: 50%;
-  left: 0;
-  transform: translate3d(0, -50%, 35px) perspective(100px);
+  /* position: absolute; */
+  width: 70%;
+  /* padding: 0 90px; */
+  /* top: 50%; */
+  /* left: 0; */
+  /* transform: translate3d(0, -50%, 35px) perspective(100px); */
   z-index: 20;
   display: block;
 }
 
 .form-group {
+  margin-bottom: 25px;
   position: relative;
-  display: block;
+  display: flex;
+  align-items: center;
   margin: 0;
   padding: 0;
 }
@@ -333,6 +328,21 @@ h6 span {
   color: #ffffff;
   -webkit-transition: all 200ms linear;
   transition: all 200ms linear;
+}
+.input-icon-postfix {
+  height: 48px;
+  font-size: 24px;
+  line-height: 48px;
+  text-align: left;
+  color: #ffffff;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+.visibility-btn {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 12px;
 }
 
 .form-group input:-ms-input-placeholder {
@@ -380,15 +390,20 @@ h6 span {
   transition: all 200ms linear;
 }
 
+.registration {
+  height: 44px;
+  padding: 0 30px;
+
+}
+
 .btn {
   border-radius: 4px;
-  height: 44px;
+  
   font-size: 13px;
   font-weight: 600;
   text-transform: uppercase;
   -webkit-transition: all 200ms linear;
   transition: all 200ms linear;
-  padding: 0 30px;
   letter-spacing: 1px;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -411,7 +426,7 @@ h6 span {
 
 .btn:active,
 .btn:focus {
-  background-color: #102770;
+  background-color: #111212; /*  #102770; */
   color: #ffeba7;
   box-shadow: 0 8px 24px 0 rgba(16, 39, 112, 0.2);
 }

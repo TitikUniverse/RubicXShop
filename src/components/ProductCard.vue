@@ -43,9 +43,10 @@ export default {
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.379);
   margin: 17px 17px;
+  transition: all 0.2s;
 
   &:hover {
-    transform: scale(1.15);
+    transform: scale(1.10);
   }
 
 }

@@ -8,7 +8,7 @@
 
 <div class="container">
   <h1>Выдача коинов</h1>
-  <p>Номер группы:</p>
+  <span>Номер группы:</span>
   <div class="dropdown">
     <select name="one" class="dropdown-select">
       <option value="">Выбрать</option>
@@ -20,6 +20,10 @@
 
   <div class="addition-coins">
     <div class="student-info">
+      <CoinInputTemplate/>
+      <CoinInputTemplate/>
+      <CoinInputTemplate/>
+      <CoinInputTemplate/>
       <CoinInputTemplate/>
     </div>
   </div>
@@ -103,12 +107,16 @@ components: {
  
 }
 
-
+.addition-coins {
+  width: 100%;
+  margin-top: 50px;
+}
 .student-info{
   width: 100%;
   display: flex;
-  flex-direction: column;
-  margin-bottom: 15px;  
+  flex-direction: row;
+  margin-bottom: 15px;
+  justify-content: space-evenly;
 }
 .student-name{
   height: 30px;
@@ -156,23 +164,17 @@ body {
 
 .container {
   margin: 80px auto;
-  width: 553px;
   text-align: center;
   align-items: center;
 }
 
-.container > .dropdown {
-  margin: 0 20px;
-  vertical-align: top;
-  margin: 41px;
-  margin-left: 41px;
-}
-
 .dropdown {
   display: flex;
-  position: relative;
+  flex-direction: column;
   overflow: hidden;
-  height: 28px;
+  margin: 10px auto;
+  vertical-align: top;
+  // height: 28px;
   width: 443px;
   background: #f2f2f2;
   border: 1px solid;
@@ -185,32 +187,8 @@ body {
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
   @media only screen and (max-device-width: 480px) {
-  width: 49%;
+    width: 49%;
   }
-}
-
-.dropdown:before, .dropdown:after {
-  content: '';
-  position: absolute;
-  z-index: 2;
-  top: 9px;
-  right: 10px;
-  width: 0;
-  height: 0;
-  border: 4px dashed;
-  border-color: #888888 transparent;
-  pointer-events: none;
-}
-
-.dropdown:before {
-  border-bottom-style: solid;
-  border-top: none;
-}
-
-.dropdown:after {
-  margin-top: 7px;
-  border-top-style: solid;
-  border-bottom: none;
 }
 
 .dropdown-select {
@@ -321,11 +299,6 @@ body {
 .container>h1 {
   text-align: center;
   margin: 37px;
-}
-
-.container>p {
-  margin-right: 330px;
-  margin-bottom: -35px;
 }
 
 .groop>p {

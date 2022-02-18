@@ -155,12 +155,12 @@ html {
   justify-content: space-evenly;
   padding: 30px 10px 10px;
 
-  @media only screen and (min-device-width: 480px) {
-    border-right: 2px solid rgba(255, 255, 255, 0.513);
-    position: relative;
-    left: 6%;
-    width: 70%;
-  }
+  // @media only screen and (min-device-width: 480px) {
+  //   border-right: 2px solid rgba(255, 255, 255, 0.513);
+  //   position: relative;
+  //   left: 6%;
+  //   width: 70%;
+  // }
 }
 
 .content {
@@ -170,18 +170,6 @@ html {
   left: 6%;
   position: relative;
   width: 94%;
-
- @media only screen and (min-device-width: 480px) {
-    border-right: 2px solid rgba(255, 255, 255, 0.513);
-    position: relative;
-    left: 6%;
-    width: 70%;
-  }
-  @media only screen and (max-device-width: 479px) {
-    width: 100%;
-  }
-
-
 }
 table {
   font-family: sans-serif;
