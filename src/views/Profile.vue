@@ -170,6 +170,12 @@ html {
   left: 6%;
   position: relative;
   width: 94%;
+
+  @media only screen and (max-device-width: 479px) {
+    width: 100%;
+    margin-right: 10%;
+    height: 139vh;
+  }
 }
 table {
   font-family: sans-serif;
@@ -179,12 +185,18 @@ table {
   border-radius: 20px;
 
   @media only screen and (max-device-width: 479px) {
-    width: 100%;
+    display: flex;
+    
   }
 }
 th {
   font-size: 18px;
   padding: 10px;
+
+  @media only screen and (max-device-width: 479px) {
+    display: flex;
+    margin-left: -74%;
+  } 
 }
 td {
   background: rgb(101 191 165);
@@ -193,6 +205,16 @@ td {
   font-weight: bold;
   font-size: 20px;
   border-radius: 25px;
+  
+
+  @media only screen and (max-device-width: 479px) {
+        display: flex;
+    margin-left: 10%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  } 
 }
 td:last-child {
   background: rgb(87 116 182);
@@ -201,6 +223,8 @@ td:last-child {
   font-weight: bold;
   font-size: 20px;
   border-radius: 25px;
+
+  
 }
 .main-btn{
   z-index: 1;
