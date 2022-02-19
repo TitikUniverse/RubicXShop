@@ -17,6 +17,7 @@
       <div class="content">
         <ProductCard v-for="item in productDataTest" :key="item.name" :productData=item />
       </div>
+      <Burger />
     </div>
 
     <!-- <div class="row">
@@ -62,11 +63,13 @@
 <script>
 import LeftMenu from "../components/LeftMenu.vue";
 import ProductCard from "../components/ProductCard.vue";
+import Burger from "../components/Burger.vue";
 
 export default {
   components: {
     LeftMenu,
-    ProductCard
+    ProductCard,
+    Burger
   },
   data() {
     return {

@@ -1,4 +1,5 @@
 <template>
+
   <div>
     <div class="section main-section">
       <div class="container">
@@ -69,12 +70,17 @@
         </div>
       </div>
     </div>
-
+  <Burger />
   </div>
 </template>
 
 <script>
+import Burger from "../components/Burger.vue";
+
 export default{
+components: {
+    Burger
+},
   data() {
     return {
       characters: 'a-z,A-Z,0-9',
@@ -115,10 +121,11 @@ export default{
       return password;
     }
   }
+
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900");
 
 body {
@@ -266,6 +273,11 @@ h6 span {
   -moz-backface-visibility: hidden;
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
+
+   @media only screen and (max-device-width: 479px) {
+    width: 100%;
+    margin-left:0%;
+  }   
   
 }
 .card-back {

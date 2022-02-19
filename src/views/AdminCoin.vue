@@ -26,6 +26,7 @@
       <CoinInputTemplate/>
       <CoinInputTemplate/>
     </div>
+    <Burger />
   </div>
 
 
@@ -53,6 +54,7 @@
 <script>
 import LeftMenu from "../components/LeftMenu.vue";
 import CoinInputTemplate from "../components/CoinInputTemplate.vue"
+import Burger from "../components/Burger.vue";
 
 function a() {
 
@@ -78,6 +80,7 @@ export default {
 components: {
     LeftMenu,
     CoinInputTemplate,
+    Burger
   },
 }
 </script>

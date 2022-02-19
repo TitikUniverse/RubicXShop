@@ -4,6 +4,7 @@
       <LeftMenu />
     </div>
     <div class="content">
+      
       <div class="first-row">
         <div id="logo">
           <img
@@ -41,12 +42,14 @@
         <router-link tag="button" to="/admincoin" class="main-btn">Открыть админ панель</router-link>
         <router-link tag="button" to="/applications" class="main-btn">Открыть список заявок</router-link>
       </div>
+      <Burger />
     </div>
   </section>
 </template>
 
 <script>
 import LeftMenu from "../components/LeftMenu.vue";
+import Burger from "../components/Burger.vue";
 
 export default {
   data() {
@@ -61,6 +64,7 @@ export default {
   },
   components: {
     LeftMenu,
+    Burger
   },
 };
 

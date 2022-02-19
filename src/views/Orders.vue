@@ -7,6 +7,7 @@
     <div class="center">
       <h1>Лист ожиданий</h1>
       <OrderCard v-for="item in productDataTest" :key="item.name" :productData="item"  />
+      <Burger />
     </div> 
   </section>
 </template>
@@ -14,12 +15,14 @@
 <script>
 import OrderCard from '../components/OrderCard.vue';
 import LeftMenu from "../components/LeftMenu.vue";
+import Burger from "../components/Burger.vue";
 
 export default {
   name: 'orders',
   components: {
     OrderCard,
     LeftMenu,
+    Burger
   },
   data() {
     return {

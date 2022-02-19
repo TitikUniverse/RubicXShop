@@ -29,17 +29,19 @@
           <button id="save-btn" class="main-btn green-color">Сохранить</button>
 
         </div>
-        
+        <Burger />
     </div>
   </section>
 </template>
 
 <script>
 import LeftMenu from '../components/LeftMenu.vue'
+import Burger from "../components/Burger.vue";
 
 export default {
   components: {
-    LeftMenu
+    LeftMenu,
+    Burger
   }
 }
 </script>
