@@ -107,6 +107,9 @@ components: {
   position: fixed;
   border-right: 2px solid rgba(255, 255, 255, 0.513);
 
+  @media only screen and (max-device-width: 480px) {
+    display: none;
+  }
  
 }
 
