@@ -209,6 +209,9 @@ td {
   font-weight: bold;
   font-size: 20px;
   border-radius: 25px;
+
+    height: 46px;
+    width: 45px;
   
 
   @media only screen and (max-device-width: 479px) {
@@ -221,7 +224,7 @@ td {
   } 
 }
 td:last-child {
-  background: rgb(87 116 182);
+  background: #5774b6;
   text-align: center;
   padding: 10px;
   font-weight: bold;

@@ -1,6 +1,6 @@
 <template>
 <div class="dropdown">
-  <button class="dropbtn" @click="">Регионы</button>
+  <button class="dropbtn" click="">Регионы</button>
   <div class="dropdown-content">
     <div class="town">
         <a>Тула</a>

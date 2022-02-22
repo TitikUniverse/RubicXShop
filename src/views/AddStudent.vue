@@ -6,27 +6,22 @@
     <div class="center">
       <div class="header">
         <div class="find-container">
-          <input type="text" placeholder="Добавить название товара" />
+          <input type="text" placeholder="Полное имя ученика" />
         </div>
       </div> 
       <div class="header">
         <div class="find-container">
-          <input type="text" placeholder="Добавить изображение товара" />
+          <input type="text" placeholder="Указать электронную почту ученика" />
         </div>
       </div> 
       <div class="header">
         <div class="find-container">
-          <input type="text" placeholder="Добавить описание товара" />
+          <input type="text" placeholder="Указать пароль ученика" />
         </div>
       </div> 
-      <div class="header">
-        <div class="find-container">
-          <input type="text" placeholder="Добавить название товара" />
-        </div>
-      </div>
         <div class="save">
           <button id="cancel-btn" class="main-btn red-color">Отменить</button>
-          <button id="save-btn" class="main-btn green-color">Сохранить</button>
+          <button id="save-btn" class="main-btn green-color">Добавить</button>
 
         </div>
         <Burger />
@@ -77,7 +72,6 @@ color: white;
     position: relative;
     left: 6%;
     width: 70%;
-  
   }
   @media only screen and (max-device-width: 479px) {
     width: 100%;
@@ -119,7 +113,6 @@ color: white;
 .save{
   display: flex;
   justify-content: center ;
-
   margin-left: -4%;
   
 }

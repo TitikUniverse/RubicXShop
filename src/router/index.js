@@ -48,6 +48,10 @@ const routes = [
     path: '/reg',
     component: () => import('@/views/Registration.vue')
   },
+  {
+    path: '/student',
+    component: () => import('@/views/AddStudent.vue')
+  },
   
 ]
 

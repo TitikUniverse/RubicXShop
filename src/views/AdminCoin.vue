@@ -106,7 +106,7 @@ components: {
   flex-direction: row;
   min-height: 100vh;
   @media only screen and (max-device-width: 480px) {
-  width: 80%;
+  width: 100%;
   }
   
 }
@@ -209,7 +209,7 @@ body {
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
   @media only screen and (max-device-width: 480px) {
-    width: 49%;
+    width: 70%;
   }
 }
 
