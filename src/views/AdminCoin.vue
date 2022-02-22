@@ -25,8 +25,20 @@
       <CoinInputTemplate/>
       <CoinInputTemplate/>
       <CoinInputTemplate/>
+      <CoinInputTemplate/>
+      <CoinInputTemplate/>
+      <CoinInputTemplate/>
+      <CoinInputTemplate/>
+      <CoinInputTemplate/>
+      <CoinInputTemplate/>
+      <CoinInputTemplate/>
+      <CoinInputTemplate/>
+      <CoinInputTemplate/>
+      <CoinInputTemplate/>
+
     </div>
     <Burger />
+    <div class="scroll"></div>
   </div>
 
 
@@ -114,13 +126,16 @@ components: {
 }
 
 .addition-coins {
-  width: 100%;
+  overflow: hidden;
   margin-top: 50px;
+  margin-left :10px;
 }
 .student-info{
-  width: 100%;
+  overflow: auto;
+  position: relative;
   display: flex;
   flex-direction: row;
+
   margin-bottom: 15px;
   justify-content: space-evenly;
 }
@@ -169,9 +184,10 @@ body {
 }
 
 .container {
-  margin: 80px auto;
+  margin: 40px auto;
   text-align: center;
   align-items: center;
+  max-width: 90%;
 }
 
 .dropdown {
@@ -377,4 +393,29 @@ body {
 //   border: 3px solid #694dc6;
 //   background-color: #694dc61f;
 // }
+
+.scroll {
+    height: 30px;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: #d4d4d4;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .2) inset;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #939393;
+    border-radius: 8px;
+    border: 3px solid #d4d4d4;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #7c7c7c;
+}
+
 </style>

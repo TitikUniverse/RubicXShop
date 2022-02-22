@@ -56,6 +56,6 @@ export default {
 .r-icon>img {
   width: 90px;
   height: 90px;
-  margin-top: -918px;
+  margin-top: -1095px;
 }
 </style>
