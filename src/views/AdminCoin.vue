@@ -18,8 +18,20 @@
     </select>
   </div>
 
+  <div class="text_coin">
+      <span>Time Coin</span>
+      <span>Help Coin</span>
+      <span>Flash Coin</span>
+      <span>Bonus Coin</span>
+      <span>Like Coin</span>
+      <span>Fest Coin</span>
+      <span>RubiCoin</span>
+    </div>
+
   <div class="addition-coins">
     <div class="student-info">
+      
+
       <CoinInputTemplate/>
       <CoinInputTemplate/>
       <CoinInputTemplate/>
@@ -126,9 +138,16 @@ components: {
 }
 
 .addition-coins {
+  position: relative;
   overflow: hidden;
   margin-top: 50px;
-  margin-left :10px;
+  left : 170px;
+  margin: 0 5px;
+
+@media only screen and (max-device-width: 480px) {
+    margin-left: -23%;
+  }
+
 }
 .student-info{
   overflow: auto;
@@ -418,4 +437,18 @@ body {
     background: #7c7c7c;
 }
 
+
+.text_coin{
+  position: absolute;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  left: 120px;
+  top: 300px;
+  justify-content: space-between;
+
+  @media only screen and (max-device-width: 480px) {
+    margin-left: -26%;
+  }
+}
 </style>

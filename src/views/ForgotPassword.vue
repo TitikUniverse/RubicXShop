@@ -1,77 +1,138 @@
 <template>
-<div>
 
-	<div class="section main-section">
-		<div class="container">
-			<div class="row full-height justify-content-center">
-				<div class="col-12 text-center align-self-center py-5">
-					<div class="section pb-5 pt-5 pt-sm-2 text-center">
-						
-						<div class="card-3d-wrap mx-auto">
-							<div class="card-3d-wrapper">
-								<div class="card-front">		
-			      				</div>
-								<div class="card-back">
-									<div class="center-wrap">
-										<div class="section text-center">
-											<h4 class="mb-4 pb-3">Замена пароля</h4>
-											<div class="form-group">
-												<input type="text" name="logname" class="form-style" placeholder="Новый пароль" id="logname" autocomplete="off">
-												<i class="input-icon uil uil-user"></i>
-											</div>	
-											<div class="form-group mt-2">
-												<input type="email" name="logemail" class="form-style" placeholder="Ещё раз" id="logemail" autocomplete="off">
-												<i class="input-icon uil uil-at"></i>
-											</div>	
-											
-											<router-link to="/profile"><button href="#" class="btn mt-4">Заменить пароль</button></router-link>
-				      					</div>
-			      					</div>
-			      				</div>
-			      			</div>
-			      		</div>
-			      	</div>
-		      	</div>
-	      	</div>
-	    </div>
-	</div>
+  <div>
+    <div class="section main-section">
+      <div class="container">
+        <div class="row full-height justify-content-center">
+          <div class="col-12 text-center align-self-center py-5">
+            <div class="section pb-5 pt-5 pt-sm-2 text-center">
+              <!-- <h6 class="mb-0 pb-3">
+                <span>Войти</span><span>Регистрация</span>
+              </h6> -->
+              <input
+                class="checkbox"
+                type="checkbox"
+                id="reg-log"
+                name="reg-log"
+              />
+              <div class="card-front">
+                <div class="center-wrap">
+                  <div class="section text-center">
+                    <h4 class="mb-4 pb-3">Замена пароля</h4>
+                    <div class="form-group">
+                      <input
+                        type="string"
+                        name="logemail"
+                        class="form-style"
+                        placeholder="Почта"
+                        id="logemail"
+                        autocomplete="off"
+                      />
+                      <i class="input-icon uil uil-at"></i>
+                    </div>
+                    
+                    
+                    <div class="form-group mt-2">
+                      <input
+                        :type="passFieldType"
+                        name="logpass"
+                        class="form-style"
+                        placeholder="Пароль"
+                        id="logpass"
+                        autocomplete="off"
+                        v-model="pass"
+                      />
+                      <i class="input-icon uil uil-lock-alt"></i>
+                      <button class="visibility-btn" @click="togglePassVisibility()"><i class="input-icon-postfix material-icons-outlined md-36 md-light">visibility</i></button>
+                      <button class="btn generate" @click="insertPassword()"><i class="material-icons-outlined">create</i></button>
+                    </div>
+                    
+                    <router-link to="/profile"
+                      ><button href="" class="btn mt-4 registration">
+                        Заменить пароль
+                      </button></router-link
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   <Burger />
-</div>
+  </div>
 </template>
 
 <script>
-
 import Burger from "../components/Burger.vue";
-export default {
-  components: {
+
+export default{
+components: {
     Burger
+},
+  data() {
+    return {
+      characters: 'a-z,A-Z,0-9',
+      pass: '',
+      passSize: 6,
+      passFieldType: 'password'
+    }
   },
+  methods: {
+    insertPassword() {
+       this.pass = this.generate();
+    },
+    togglePassVisibility() {
+      this.passFieldType = this.passFieldType === 'password' ? 'text' : 'password'
+    },
+    generate() {
+      let charactersArray = this.characters.split(',');  
+      let CharacterSet = '';
+      let password = '';
+      
+      if( charactersArray.indexOf('a-z') >= 0) {
+        CharacterSet += 'abcdefghijklmnopqrstuvwxyz';
+      }
+      if( charactersArray.indexOf('A-Z') >= 0) {
+        CharacterSet += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+      }
+      if( charactersArray.indexOf('0-9') >= 0) {
+        CharacterSet += '0123456789';
+      }
+      if( charactersArray.indexOf('#') >= 0) {
+        CharacterSet += '![]{}()%&*$#^<>~@|';
+      }
+      
+      for(let i=0; i < this.passSize; i++) {
+        password += CharacterSet.charAt(Math.floor(Math.random() * CharacterSet.length));
+      }
+      console.log(password);
+      return password;
+    }
+  }
+
 };
 </script>
 
-<style scoped>
-  
+<style lang="scss" scoped>
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900");
 
-/* Please ❤ this if you like it! */
-
-
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
-
-body{
-	font-family: 'Poppins', sans-serif;
-	font-weight: 300;
-	font-size: 15px;
-	line-height: 1.7;
-	color: #c4c3ca;
-	background-color: #1f2029;
-	overflow-x: hidden;
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #c4c3ca;
+  background-color: #1f2029;
+  overflow-x: hidden;
 }
 a {
-	cursor: pointer;
+  cursor: pointer;
   transition: all 200ms linear;
 }
 a:hover {
-	text-decoration: none;
+  text-decoration: none;
 }
 .link {
   color: #c4c3ca;
@@ -88,25 +149,73 @@ h4 {
   font-weight: 600;
   color: rgb(255, 255, 255);
 }
-h6 span{
+h6 span {
   padding: 0 15px;
   text-transform: uppercase;
   font-weight: 700;
   color: rgb(255, 255, 255);
 }
-.section{
+.section {
   position: relative;
   width: 100%;
   display: block;
 }
-.main-section  {
+.main-section {
   background: linear-gradient(rgb(1, 165, 138), rgb(13, 84, 165));
 }
 
-.full-height{
+.full-height {
   min-height: 100vh;
 }
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+.checkbox:checked + label,
+.checkbox:not(:checked) + label {
+  position: relative;
+  display: block;
+  text-align: center;
+  width: 60px;
+  height: 16px;
+  border-radius: 8px;
+  padding: 0;
+  margin: 10px auto;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+.checkbox:checked + label:before,
+.checkbox:not(:checked) + label:before {
+  position: absolute;
+  display: block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: #ffffff;
+  background: linear-gradient(rgb(1, 165, 138), rgb(13, 84, 165));
+  font-family: "unicons";
+  content: "\eb4f";
+  z-index: 20;
+  top: -10px;
+  left: -10px;
+  line-height: 36px;
+  text-align: center;
+  font-size: 24px;
+  transition: all 0.5s ease;
+}
+.checkbox:checked + label:before {
+  transform: translateX(44px) rotate(-270deg);
+}
 
+
+.generate{
+  position: absolute;
+  width: 40px;
+  height: 80%;
+  right: -50px;
+  /* background-color: #1f2029; */
+}
 
 .card-3d-wrap {
   position: relative;
@@ -118,55 +227,73 @@ h6 span{
   perspective: 800px;
   margin-top: 60px;
 }
+
 .card-3d-wrapper {
   width: 100%;
   height: 100%;
-  position:absolute;    
+  position: absolute;
   top: 0;
-  left: 0;  
+  left: 0;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  transition: all 600ms ease-out; 
+  transition: all 600ms ease-out;
 }
-.card-front, .card-back {
-  width: 100%;
-  height: 100%;
+.card-front,
+.card-back {
+  width: 40%;
+  height: 400px;
   background-color: #17171a;
-  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg');
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg");
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: 300%;
-  position: absolute;
   border-radius: 6px;
-  left: 0;
-  top: 0;
+
+  margin-left: 30%;
+  align-items: center;
+  
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
-  
+
+   @media only screen and (max-device-width: 479px) {
+    width: 100%;
+    margin-left:0%;
+  }   
   
 }
-
-.center-wrap{
-  position: absolute;
-  width: 100%;
-  padding: 0 35px;
-  top: 50%;
-  left: 0;
-  transform: translate3d(0, -50%, 35px) perspective(100px);
+.card-back {
+  transform: rotateY(180deg);
+}
+.checkbox:checked ~ .card-3d-wrap .card-3d-wrapper {
+  transform: rotateY(180deg);
+}
+.center-wrap {
+  /* position: absolute; */
+  width: 70%;
+  /* padding: 0 90px; */
+  /* top: 50%; */
+  /* left: 0; */
+  /* transform: translate3d(0, -50%, 35px) perspective(100px); */
   z-index: 20;
   display: block;
 }
 
-
-.form-group{ 
+.form-group {
+  margin-bottom: 25px;
   position: relative;
-  display: block;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 .form-style {
   padding: 13px 20px;
@@ -184,13 +311,13 @@ h6 span{
   border: none;
   -webkit-transition: all 200ms linear;
   transition: all 200ms linear;
-  box-shadow: 0 4px 8px 0 rgba(21,21,21,.2);
+  box-shadow: 0 4px 8px 0 rgba(21, 21, 21, 0.2);
 }
 .form-style:focus,
 .form-style:active {
   border: none;
   outline: none;
-  box-shadow: 0 4px 8px 0 rgba(21,21,21,.2);
+  box-shadow: 0 4px 8px 0 rgba(21, 21, 21, 0.2);
 }
 .input-icon {
   position: absolute;
@@ -202,63 +329,83 @@ h6 span{
   text-align: left;
   color: #ffffff;
   -webkit-transition: all 200ms linear;
-    transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+.input-icon-postfix {
+  height: 48px;
+  font-size: 24px;
+  line-height: 48px;
+  text-align: left;
+  color: #ffffff;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+.visibility-btn {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 12px;
 }
 
-.form-group input:-ms-input-placeholder  {
+.form-group input:-ms-input-placeholder {
   color: #c4c3ca;
   opacity: 0.7;
   -webkit-transition: all 200ms linear;
-    transition: all 200ms linear;
+  transition: all 200ms linear;
 }
-.form-group input::-moz-placeholder  {
+.form-group input::-moz-placeholder {
   color: #c4c3ca;
   opacity: 0.7;
   -webkit-transition: all 200ms linear;
-    transition: all 200ms linear;
+  transition: all 200ms linear;
 }
-.form-group input:-moz-placeholder  {
+.form-group input:-moz-placeholder {
   color: #c4c3ca;
   opacity: 0.7;
   -webkit-transition: all 200ms linear;
-    transition: all 200ms linear;
+  transition: all 200ms linear;
 }
-.form-group input::-webkit-input-placeholder  {
+.form-group input::-webkit-input-placeholder {
   color: #c4c3ca;
   opacity: 0.7;
   -webkit-transition: all 200ms linear;
-    transition: all 200ms linear;
+  transition: all 200ms linear;
 }
-.form-group input:focus:-ms-input-placeholder  {
+.form-group input:focus:-ms-input-placeholder {
   opacity: 0;
   -webkit-transition: all 200ms linear;
-    transition: all 200ms linear;
+  transition: all 200ms linear;
 }
-.form-group input:focus::-moz-placeholder  {
+.form-group input:focus::-moz-placeholder {
   opacity: 0;
   -webkit-transition: all 200ms linear;
-    transition: all 200ms linear;
+  transition: all 200ms linear;
 }
-.form-group input:focus:-moz-placeholder  {
+.form-group input:focus:-moz-placeholder {
   opacity: 0;
   -webkit-transition: all 200ms linear;
-    transition: all 200ms linear;
+  transition: all 200ms linear;
 }
-.form-group input:focus::-webkit-input-placeholder  {
+.form-group input:focus::-webkit-input-placeholder {
   opacity: 0;
   -webkit-transition: all 200ms linear;
-    transition: all 200ms linear;
+  transition: all 200ms linear;
 }
 
-.btn{  
-  border-radius: 4px;
+.registration {
   height: 44px;
+  padding: 0 30px;
+
+}
+
+.btn {
+  border-radius: 4px;
+  
   font-size: 13px;
   font-weight: 600;
   text-transform: uppercase;
-  -webkit-transition : all 200ms linear;
+  -webkit-transition: all 200ms linear;
   transition: all 200ms linear;
-  padding: 0 30px;
   letter-spacing: 1px;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -279,33 +426,29 @@ h6 span{
   box-shadow: 0 8px 24px 0 rgb(12 87 164);
 }
 
-
 .btn:active,
-.btn:focus{  
-  background-color: #102770;
+.btn:focus {
+  background-color: #111212; /*  #102770; */
   color: #ffeba7;
-  box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
+  box-shadow: 0 8px 24px 0 rgba(16, 39, 112, 0.2);
 }
-.btn:hover{  
+.btn:hover {
   background-color: #111212;
   color: #ffffff;
   box-shadow: 0 8px 24px 0 rgba(2 160 139);
 }
 
-
-
-
 .logo {
-	position: absolute;
-	top: 30px;
-	right: 30px;
-	display: block;
-	z-index: 100;
-	transition: all 250ms linear;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  display: block;
+  z-index: 100;
+  transition: all 250ms linear;
 }
 .logo img {
-	height: 26px;
-	width: auto;
-	display: block;
+  height: 26px;
+  width: auto;
+  display: block;
 }
 </style>

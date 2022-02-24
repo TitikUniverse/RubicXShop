@@ -5,9 +5,6 @@
       </div>
       <div class="addition">
         <div class="addition-item">
-          <div class="coinname">
-            TimeCoin
-          </div>
           <div class="addition-button">
             <button class="minusbutton">-</button>
               <input class="Flash">
@@ -16,9 +13,6 @@
         </div>
 
         <div class="addition-item">
-          <div class="coinname">
-            HelpCoin
-          </div>
           <div class="addition-button">
             <button class="minusbutton">-</button>
               <input class="Flash">
@@ -27,9 +21,6 @@
         </div>
 
         <div class="addition-item">
-          <div class="coinname">
-            FlashCoin
-          </div>
           <div class="addition-button">
             <button class="minusbutton">-</button>
               <input class="Flash">
@@ -38,9 +29,6 @@
         </div>
 
         <div class="addition-item">
-          <div class="coinname">
-            BonusCoin
-          </div>
           <div class="addition-button">
             <button class="minusbutton">-</button>
               <input class="Flash">
@@ -49,9 +37,6 @@
         </div>
 
         <div class="addition-item">
-          <div class="coinname">
-            LikeCoin
-          </div>
           <div class="addition-button">
             <button class="minusbutton">-</button>
               <input class="Flash">
@@ -60,9 +45,6 @@
         </div>
 
         <div class="addition-item">
-          <div class="coinname">
-            FestCoin
-          </div>
           <div class="addition-button">
             <button class="minusbutton">-</button>
               <input class="Flash">
@@ -71,9 +53,6 @@
         </div>
 
         <div class="addition-item">
-          <div class="coinname">
-            RubiCoin
-          </div>
           <div class="addition-button">
             <button class="minusbutton">-</button>
               <input class="Flash">

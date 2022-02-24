@@ -80,9 +80,12 @@ color: white;
   }
 }
 .find-container {
+  width: 70%;
+  position: relative;
+  left: 13%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   height: 70%;
   background-color: rgba(255, 255, 255, 0.379);
