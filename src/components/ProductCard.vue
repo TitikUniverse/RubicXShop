@@ -8,7 +8,7 @@
         R
       <!-- <img id="image" src="@/assets/RIcon.png" alt="R"> -->
       </span>
-      <button class="buy-btn purple-color">Подробнее</button>
+      <button class="buy-btn purple-color" >Подробнее</button>
     </div>
     
   </div>
@@ -57,7 +57,7 @@ export default {
 }
 
 .buy-btn  {
-  z-index: 1;
+  z-index: 0;
   position: relative;
   font-size: inherit;
   font-family: inherit;

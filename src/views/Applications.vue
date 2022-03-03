@@ -4,7 +4,7 @@
       <LeftMenu />
     </div>
     <div class="center">
-      <h1>Список заявок</h1>
+      <h1>Список заявок получения товара</h1>
       <OrderCard v-for="item in productDataTest" :key="item.name" :productData="item"  />
       <Burger />
     </div> 

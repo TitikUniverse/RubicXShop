@@ -21,7 +21,7 @@
       </div> 
       <div class="header">
         <div class="find-container">
-          <input type="text" placeholder="Добавить название товара" />
+          <input type="text" placeholder="Добавить цену товара" />
         </div>
       </div>
         <div class="save">
