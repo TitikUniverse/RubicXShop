@@ -5,15 +5,6 @@
     </div>
  
     <div class="center">
-      <div class="header">
-        <div class="find-container">
-          <input type="text" placeholder="Поиск" />
-          <button id="find-btn" class="main-btn purple-color">
-            <div class="material-icons-outlined md-36 md-light">search</div>
-          </button>
-        </div>
-      </div> 
-
       <div class="content">
         <ProductCard v-for="item in productDataTest" :key="item.name" :productData=item />
       </div>
@@ -83,8 +74,9 @@ export default {
         { name: "Повербанк", imageUrl: "https://yt3.ggpht.com/a/AGF-l79qNv-LqiuIhbkJ7trtdWLdAebjaJSGtJgSwA=s900-c-k-c0xffffffff-no-rj-mo", price: 10 },
         { name: "Худи", imageUrl: "https://yt3.ggpht.com/a/AGF-l79qNv-LqiuIhbkJ7trtdWLdAebjaJSGtJgSwA=s900-c-k-c0xffffffff-no-rj-mo", price: 700 },
         { name: "Футболка", imageUrl: "https://yt3.ggpht.com/a/AGF-l79qNv-LqiuIhbkJ7trtdWLdAebjaJSGtJgSwA=s900-c-k-c0xffffffff-no-rj-mo", price: 320 },
-      ]
-    }
+      ],
+    
+    }   
   }
 };
 </script>
